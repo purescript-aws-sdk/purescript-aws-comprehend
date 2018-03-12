@@ -20,62 +20,82 @@ import Data.StrMap as StrMap
 import AWS.Request as Request
 import AWS.Request.Types as Types
 
-serviceName = "Comprehend" :: String
-
 
 -- | <p>Determines the dominant language of the input text for a batch of documents. For a list of languages that Amazon Comprehend can detect, see <a href="http://docs.aws.amazon.com/comprehend/latest/dg/how-languages.html">Amazon Comprehend Supported Languages</a>. </p>
 batchDetectDominantLanguage :: forall eff. BatchDetectDominantLanguageRequest -> Aff (exception :: EXCEPTION | eff) BatchDetectDominantLanguageResponse
-batchDetectDominantLanguage = Request.request serviceName "batchDetectDominantLanguage" 
+batchDetectDominantLanguage = Request.request service method  where
+    service = Request.ServiceName "Comprehend"
+    method = Request.MethodName "batchDetectDominantLanguage"
 
 
 -- | <p>Inspects the text of a batch of documents and returns information about them. For more information about entities, see <a>how-entities</a> </p>
 batchDetectEntities :: forall eff. BatchDetectEntitiesRequest -> Aff (exception :: EXCEPTION | eff) BatchDetectEntitiesResponse
-batchDetectEntities = Request.request serviceName "batchDetectEntities" 
+batchDetectEntities = Request.request service method  where
+    service = Request.ServiceName "Comprehend"
+    method = Request.MethodName "batchDetectEntities"
 
 
 -- | <p>Detects the key noun phrases found in a batch of documents.</p>
 batchDetectKeyPhrases :: forall eff. BatchDetectKeyPhrasesRequest -> Aff (exception :: EXCEPTION | eff) BatchDetectKeyPhrasesResponse
-batchDetectKeyPhrases = Request.request serviceName "batchDetectKeyPhrases" 
+batchDetectKeyPhrases = Request.request service method  where
+    service = Request.ServiceName "Comprehend"
+    method = Request.MethodName "batchDetectKeyPhrases"
 
 
 -- | <p>Inspects a batch of documents and returns an inference of the prevailing sentiment, <code>POSITIVE</code>, <code>NEUTRAL</code>, <code>MIXED</code>, or <code>NEGATIVE</code>, in each one.</p>
 batchDetectSentiment :: forall eff. BatchDetectSentimentRequest -> Aff (exception :: EXCEPTION | eff) BatchDetectSentimentResponse
-batchDetectSentiment = Request.request serviceName "batchDetectSentiment" 
+batchDetectSentiment = Request.request service method  where
+    service = Request.ServiceName "Comprehend"
+    method = Request.MethodName "batchDetectSentiment"
 
 
 -- | <p>Gets the properties associated with a topic detection job. Use this operation to get the status of a detection job.</p>
 describeTopicsDetectionJob :: forall eff. DescribeTopicsDetectionJobRequest -> Aff (exception :: EXCEPTION | eff) DescribeTopicsDetectionJobResponse
-describeTopicsDetectionJob = Request.request serviceName "describeTopicsDetectionJob" 
+describeTopicsDetectionJob = Request.request service method  where
+    service = Request.ServiceName "Comprehend"
+    method = Request.MethodName "describeTopicsDetectionJob"
 
 
 -- | <p>Determines the dominant language of the input text. For a list of languages that Amazon Comprehend can detect, see <a href="http://docs.aws.amazon.com/comprehend/latest/dg/how-languages.html">Amazon Comprehend Supported Languages</a>. </p>
 detectDominantLanguage :: forall eff. DetectDominantLanguageRequest -> Aff (exception :: EXCEPTION | eff) DetectDominantLanguageResponse
-detectDominantLanguage = Request.request serviceName "detectDominantLanguage" 
+detectDominantLanguage = Request.request service method  where
+    service = Request.ServiceName "Comprehend"
+    method = Request.MethodName "detectDominantLanguage"
 
 
 -- | <p>Inspects text for entities, and returns information about them. For more information, about entities, see <a>how-entities</a>. </p>
 detectEntities :: forall eff. DetectEntitiesRequest -> Aff (exception :: EXCEPTION | eff) DetectEntitiesResponse
-detectEntities = Request.request serviceName "detectEntities" 
+detectEntities = Request.request service method  where
+    service = Request.ServiceName "Comprehend"
+    method = Request.MethodName "detectEntities"
 
 
 -- | <p>Detects the key noun phrases found in the text. </p>
 detectKeyPhrases :: forall eff. DetectKeyPhrasesRequest -> Aff (exception :: EXCEPTION | eff) DetectKeyPhrasesResponse
-detectKeyPhrases = Request.request serviceName "detectKeyPhrases" 
+detectKeyPhrases = Request.request service method  where
+    service = Request.ServiceName "Comprehend"
+    method = Request.MethodName "detectKeyPhrases"
 
 
 -- | <p>Inspects text and returns an inference of the prevailing sentiment (<code>POSITIVE</code>, <code>NEUTRAL</code>, <code>MIXED</code>, or <code>NEGATIVE</code>). </p>
 detectSentiment :: forall eff. DetectSentimentRequest -> Aff (exception :: EXCEPTION | eff) DetectSentimentResponse
-detectSentiment = Request.request serviceName "detectSentiment" 
+detectSentiment = Request.request service method  where
+    service = Request.ServiceName "Comprehend"
+    method = Request.MethodName "detectSentiment"
 
 
 -- | <p>Gets a list of the topic detection jobs that you have submitted.</p>
 listTopicsDetectionJobs :: forall eff. ListTopicsDetectionJobsRequest -> Aff (exception :: EXCEPTION | eff) ListTopicsDetectionJobsResponse
-listTopicsDetectionJobs = Request.request serviceName "listTopicsDetectionJobs" 
+listTopicsDetectionJobs = Request.request service method  where
+    service = Request.ServiceName "Comprehend"
+    method = Request.MethodName "listTopicsDetectionJobs"
 
 
 -- | <p>Starts an asynchronous topic detection job. Use the <code>DescribeTopicDetectionJob</code> operation to track the status of a job.</p>
 startTopicsDetectionJob :: forall eff. StartTopicsDetectionJobRequest -> Aff (exception :: EXCEPTION | eff) StartTopicsDetectionJobResponse
-startTopicsDetectionJob = Request.request serviceName "startTopicsDetectionJob" 
+startTopicsDetectionJob = Request.request service method  where
+    service = Request.ServiceName "Comprehend"
+    method = Request.MethodName "startTopicsDetectionJob"
 
 
 newtype AnyLengthString = AnyLengthString String
