@@ -26,7 +26,7 @@ Encode AnyLengthString
 
 ``` purescript
 newtype BatchDetectDominantLanguageItemResult
-  = BatchDetectDominantLanguageItemResult { "Index" :: NullOrUndefined (Int), "Languages" :: NullOrUndefined (ListOfDominantLanguages) }
+  = BatchDetectDominantLanguageItemResult { "Index" :: Maybe (Int), "Languages" :: Maybe (ListOfDominantLanguages) }
 ```
 
 <p>The result of calling the operation. The operation returns one object for each document that is successfully processed by the operation.</p>
@@ -51,7 +51,7 @@ Constructs BatchDetectDominantLanguageItemResult from required parameters
 #### `newBatchDetectDominantLanguageItemResult'`
 
 ``` purescript
-newBatchDetectDominantLanguageItemResult' :: ({ "Index" :: NullOrUndefined (Int), "Languages" :: NullOrUndefined (ListOfDominantLanguages) } -> { "Index" :: NullOrUndefined (Int), "Languages" :: NullOrUndefined (ListOfDominantLanguages) }) -> BatchDetectDominantLanguageItemResult
+newBatchDetectDominantLanguageItemResult' :: ({ "Index" :: Maybe (Int), "Languages" :: Maybe (ListOfDominantLanguages) } -> { "Index" :: Maybe (Int), "Languages" :: Maybe (ListOfDominantLanguages) }) -> BatchDetectDominantLanguageItemResult
 ```
 
 Constructs BatchDetectDominantLanguageItemResult's fields from required parameters
@@ -124,7 +124,7 @@ Constructs BatchDetectDominantLanguageResponse's fields from required parameters
 
 ``` purescript
 newtype BatchDetectEntitiesItemResult
-  = BatchDetectEntitiesItemResult { "Index" :: NullOrUndefined (Int), "Entities" :: NullOrUndefined (ListOfEntities) }
+  = BatchDetectEntitiesItemResult { "Index" :: Maybe (Int), "Entities" :: Maybe (ListOfEntities) }
 ```
 
 <p>The result of calling the operation. The operation returns one object for each document that is successfully processed by the operation.</p>
@@ -149,7 +149,7 @@ Constructs BatchDetectEntitiesItemResult from required parameters
 #### `newBatchDetectEntitiesItemResult'`
 
 ``` purescript
-newBatchDetectEntitiesItemResult' :: ({ "Index" :: NullOrUndefined (Int), "Entities" :: NullOrUndefined (ListOfEntities) } -> { "Index" :: NullOrUndefined (Int), "Entities" :: NullOrUndefined (ListOfEntities) }) -> BatchDetectEntitiesItemResult
+newBatchDetectEntitiesItemResult' :: ({ "Index" :: Maybe (Int), "Entities" :: Maybe (ListOfEntities) } -> { "Index" :: Maybe (Int), "Entities" :: Maybe (ListOfEntities) }) -> BatchDetectEntitiesItemResult
 ```
 
 Constructs BatchDetectEntitiesItemResult's fields from required parameters
@@ -222,7 +222,7 @@ Constructs BatchDetectEntitiesResponse's fields from required parameters
 
 ``` purescript
 newtype BatchDetectKeyPhrasesItemResult
-  = BatchDetectKeyPhrasesItemResult { "Index" :: NullOrUndefined (Int), "KeyPhrases" :: NullOrUndefined (ListOfKeyPhrases) }
+  = BatchDetectKeyPhrasesItemResult { "Index" :: Maybe (Int), "KeyPhrases" :: Maybe (ListOfKeyPhrases) }
 ```
 
 <p>The result of calling the operation. The operation returns one object for each document that is successfully processed by the operation.</p>
@@ -247,7 +247,7 @@ Constructs BatchDetectKeyPhrasesItemResult from required parameters
 #### `newBatchDetectKeyPhrasesItemResult'`
 
 ``` purescript
-newBatchDetectKeyPhrasesItemResult' :: ({ "Index" :: NullOrUndefined (Int), "KeyPhrases" :: NullOrUndefined (ListOfKeyPhrases) } -> { "Index" :: NullOrUndefined (Int), "KeyPhrases" :: NullOrUndefined (ListOfKeyPhrases) }) -> BatchDetectKeyPhrasesItemResult
+newBatchDetectKeyPhrasesItemResult' :: ({ "Index" :: Maybe (Int), "KeyPhrases" :: Maybe (ListOfKeyPhrases) } -> { "Index" :: Maybe (Int), "KeyPhrases" :: Maybe (ListOfKeyPhrases) }) -> BatchDetectKeyPhrasesItemResult
 ```
 
 Constructs BatchDetectKeyPhrasesItemResult's fields from required parameters
@@ -320,7 +320,7 @@ Constructs BatchDetectKeyPhrasesResponse's fields from required parameters
 
 ``` purescript
 newtype BatchDetectSentimentItemResult
-  = BatchDetectSentimentItemResult { "Index" :: NullOrUndefined (Int), "Sentiment" :: NullOrUndefined (SentimentType), "SentimentScore" :: NullOrUndefined (SentimentScore) }
+  = BatchDetectSentimentItemResult { "Index" :: Maybe (Int), "Sentiment" :: Maybe (SentimentType), "SentimentScore" :: Maybe (SentimentScore) }
 ```
 
 <p>The result of calling the operation. The operation returns one object for each document that is successfully processed by the operation.</p>
@@ -345,7 +345,7 @@ Constructs BatchDetectSentimentItemResult from required parameters
 #### `newBatchDetectSentimentItemResult'`
 
 ``` purescript
-newBatchDetectSentimentItemResult' :: ({ "Index" :: NullOrUndefined (Int), "Sentiment" :: NullOrUndefined (SentimentType), "SentimentScore" :: NullOrUndefined (SentimentScore) } -> { "Index" :: NullOrUndefined (Int), "Sentiment" :: NullOrUndefined (SentimentType), "SentimentScore" :: NullOrUndefined (SentimentScore) }) -> BatchDetectSentimentItemResult
+newBatchDetectSentimentItemResult' :: ({ "Index" :: Maybe (Int), "Sentiment" :: Maybe (SentimentType), "SentimentScore" :: Maybe (SentimentScore) } -> { "Index" :: Maybe (Int), "Sentiment" :: Maybe (SentimentType), "SentimentScore" :: Maybe (SentimentScore) }) -> BatchDetectSentimentItemResult
 ```
 
 Constructs BatchDetectSentimentItemResult's fields from required parameters
@@ -418,7 +418,7 @@ Constructs BatchDetectSentimentResponse's fields from required parameters
 
 ``` purescript
 newtype BatchItemError
-  = BatchItemError { "Index" :: NullOrUndefined (Int), "ErrorCode" :: NullOrUndefined (String), "ErrorMessage" :: NullOrUndefined (String) }
+  = BatchItemError { "Index" :: Maybe (Int), "ErrorCode" :: Maybe (String), "ErrorMessage" :: Maybe (String) }
 ```
 
 <p>Describes an error that occurred while processing a document in a batch. The operation returns on <code>BatchItemError</code> object for each document that contained an error.</p>
@@ -443,7 +443,7 @@ Constructs BatchItemError from required parameters
 #### `newBatchItemError'`
 
 ``` purescript
-newBatchItemError' :: ({ "Index" :: NullOrUndefined (Int), "ErrorCode" :: NullOrUndefined (String), "ErrorMessage" :: NullOrUndefined (String) } -> { "Index" :: NullOrUndefined (Int), "ErrorCode" :: NullOrUndefined (String), "ErrorMessage" :: NullOrUndefined (String) }) -> BatchItemError
+newBatchItemError' :: ({ "Index" :: Maybe (Int), "ErrorCode" :: Maybe (String), "ErrorMessage" :: Maybe (String) } -> { "Index" :: Maybe (Int), "ErrorCode" :: Maybe (String), "ErrorMessage" :: Maybe (String) }) -> BatchItemError
 ```
 
 Constructs BatchItemError's fields from required parameters
@@ -468,7 +468,7 @@ Encode BatchItemErrorList
 
 ``` purescript
 newtype BatchSizeLimitExceededException
-  = BatchSizeLimitExceededException { "Message" :: NullOrUndefined (String) }
+  = BatchSizeLimitExceededException { "Message" :: Maybe (String) }
 ```
 
 <p>The number of documents in the request exceeds the limit of 25. Try your request again with fewer documents.</p>
@@ -493,7 +493,7 @@ Constructs BatchSizeLimitExceededException from required parameters
 #### `newBatchSizeLimitExceededException'`
 
 ``` purescript
-newBatchSizeLimitExceededException' :: ({ "Message" :: NullOrUndefined (String) } -> { "Message" :: NullOrUndefined (String) }) -> BatchSizeLimitExceededException
+newBatchSizeLimitExceededException' :: ({ "Message" :: Maybe (String) } -> { "Message" :: Maybe (String) }) -> BatchSizeLimitExceededException
 ```
 
 Constructs BatchSizeLimitExceededException's fields from required parameters
@@ -550,7 +550,7 @@ Constructs DescribeTopicsDetectionJobRequest's fields from required parameters
 
 ``` purescript
 newtype DescribeTopicsDetectionJobResponse
-  = DescribeTopicsDetectionJobResponse { "TopicsDetectionJobProperties" :: NullOrUndefined (TopicsDetectionJobProperties) }
+  = DescribeTopicsDetectionJobResponse { "TopicsDetectionJobProperties" :: Maybe (TopicsDetectionJobProperties) }
 ```
 
 ##### Instances
@@ -573,7 +573,7 @@ Constructs DescribeTopicsDetectionJobResponse from required parameters
 #### `newDescribeTopicsDetectionJobResponse'`
 
 ``` purescript
-newDescribeTopicsDetectionJobResponse' :: ({ "TopicsDetectionJobProperties" :: NullOrUndefined (TopicsDetectionJobProperties) } -> { "TopicsDetectionJobProperties" :: NullOrUndefined (TopicsDetectionJobProperties) }) -> DescribeTopicsDetectionJobResponse
+newDescribeTopicsDetectionJobResponse' :: ({ "TopicsDetectionJobProperties" :: Maybe (TopicsDetectionJobProperties) } -> { "TopicsDetectionJobProperties" :: Maybe (TopicsDetectionJobProperties) }) -> DescribeTopicsDetectionJobResponse
 ```
 
 Constructs DescribeTopicsDetectionJobResponse's fields from required parameters
@@ -614,7 +614,7 @@ Constructs DetectDominantLanguageRequest's fields from required parameters
 
 ``` purescript
 newtype DetectDominantLanguageResponse
-  = DetectDominantLanguageResponse { "Languages" :: NullOrUndefined (ListOfDominantLanguages) }
+  = DetectDominantLanguageResponse { "Languages" :: Maybe (ListOfDominantLanguages) }
 ```
 
 ##### Instances
@@ -637,7 +637,7 @@ Constructs DetectDominantLanguageResponse from required parameters
 #### `newDetectDominantLanguageResponse'`
 
 ``` purescript
-newDetectDominantLanguageResponse' :: ({ "Languages" :: NullOrUndefined (ListOfDominantLanguages) } -> { "Languages" :: NullOrUndefined (ListOfDominantLanguages) }) -> DetectDominantLanguageResponse
+newDetectDominantLanguageResponse' :: ({ "Languages" :: Maybe (ListOfDominantLanguages) } -> { "Languages" :: Maybe (ListOfDominantLanguages) }) -> DetectDominantLanguageResponse
 ```
 
 Constructs DetectDominantLanguageResponse's fields from required parameters
@@ -678,7 +678,7 @@ Constructs DetectEntitiesRequest's fields from required parameters
 
 ``` purescript
 newtype DetectEntitiesResponse
-  = DetectEntitiesResponse { "Entities" :: NullOrUndefined (ListOfEntities) }
+  = DetectEntitiesResponse { "Entities" :: Maybe (ListOfEntities) }
 ```
 
 ##### Instances
@@ -701,7 +701,7 @@ Constructs DetectEntitiesResponse from required parameters
 #### `newDetectEntitiesResponse'`
 
 ``` purescript
-newDetectEntitiesResponse' :: ({ "Entities" :: NullOrUndefined (ListOfEntities) } -> { "Entities" :: NullOrUndefined (ListOfEntities) }) -> DetectEntitiesResponse
+newDetectEntitiesResponse' :: ({ "Entities" :: Maybe (ListOfEntities) } -> { "Entities" :: Maybe (ListOfEntities) }) -> DetectEntitiesResponse
 ```
 
 Constructs DetectEntitiesResponse's fields from required parameters
@@ -742,7 +742,7 @@ Constructs DetectKeyPhrasesRequest's fields from required parameters
 
 ``` purescript
 newtype DetectKeyPhrasesResponse
-  = DetectKeyPhrasesResponse { "KeyPhrases" :: NullOrUndefined (ListOfKeyPhrases) }
+  = DetectKeyPhrasesResponse { "KeyPhrases" :: Maybe (ListOfKeyPhrases) }
 ```
 
 ##### Instances
@@ -765,7 +765,7 @@ Constructs DetectKeyPhrasesResponse from required parameters
 #### `newDetectKeyPhrasesResponse'`
 
 ``` purescript
-newDetectKeyPhrasesResponse' :: ({ "KeyPhrases" :: NullOrUndefined (ListOfKeyPhrases) } -> { "KeyPhrases" :: NullOrUndefined (ListOfKeyPhrases) }) -> DetectKeyPhrasesResponse
+newDetectKeyPhrasesResponse' :: ({ "KeyPhrases" :: Maybe (ListOfKeyPhrases) } -> { "KeyPhrases" :: Maybe (ListOfKeyPhrases) }) -> DetectKeyPhrasesResponse
 ```
 
 Constructs DetectKeyPhrasesResponse's fields from required parameters
@@ -806,7 +806,7 @@ Constructs DetectSentimentRequest's fields from required parameters
 
 ``` purescript
 newtype DetectSentimentResponse
-  = DetectSentimentResponse { "Sentiment" :: NullOrUndefined (SentimentType), "SentimentScore" :: NullOrUndefined (SentimentScore) }
+  = DetectSentimentResponse { "Sentiment" :: Maybe (SentimentType), "SentimentScore" :: Maybe (SentimentScore) }
 ```
 
 ##### Instances
@@ -829,7 +829,7 @@ Constructs DetectSentimentResponse from required parameters
 #### `newDetectSentimentResponse'`
 
 ``` purescript
-newDetectSentimentResponse' :: ({ "Sentiment" :: NullOrUndefined (SentimentType), "SentimentScore" :: NullOrUndefined (SentimentScore) } -> { "Sentiment" :: NullOrUndefined (SentimentType), "SentimentScore" :: NullOrUndefined (SentimentScore) }) -> DetectSentimentResponse
+newDetectSentimentResponse' :: ({ "Sentiment" :: Maybe (SentimentType), "SentimentScore" :: Maybe (SentimentScore) } -> { "Sentiment" :: Maybe (SentimentType), "SentimentScore" :: Maybe (SentimentScore) }) -> DetectSentimentResponse
 ```
 
 Constructs DetectSentimentResponse's fields from required parameters
@@ -838,7 +838,7 @@ Constructs DetectSentimentResponse's fields from required parameters
 
 ``` purescript
 newtype DominantLanguage
-  = DominantLanguage { "LanguageCode" :: NullOrUndefined (String), "Score" :: NullOrUndefined (Number) }
+  = DominantLanguage { "LanguageCode" :: Maybe (String), "Score" :: Maybe (Number) }
 ```
 
 <p>Returns the code for the dominant language in the input text and the level of confidence that Amazon Comprehend has in the accuracy of the detection.</p>
@@ -863,7 +863,7 @@ Constructs DominantLanguage from required parameters
 #### `newDominantLanguage'`
 
 ``` purescript
-newDominantLanguage' :: ({ "LanguageCode" :: NullOrUndefined (String), "Score" :: NullOrUndefined (Number) } -> { "LanguageCode" :: NullOrUndefined (String), "Score" :: NullOrUndefined (Number) }) -> DominantLanguage
+newDominantLanguage' :: ({ "LanguageCode" :: Maybe (String), "Score" :: Maybe (Number) } -> { "LanguageCode" :: Maybe (String), "Score" :: Maybe (Number) }) -> DominantLanguage
 ```
 
 Constructs DominantLanguage's fields from required parameters
@@ -872,7 +872,7 @@ Constructs DominantLanguage's fields from required parameters
 
 ``` purescript
 newtype Entity
-  = Entity { "Score" :: NullOrUndefined (Number), "Type" :: NullOrUndefined (EntityType), "Text" :: NullOrUndefined (String), "BeginOffset" :: NullOrUndefined (Int), "EndOffset" :: NullOrUndefined (Int) }
+  = Entity { "Score" :: Maybe (Number), "Type" :: Maybe (EntityType), "Text" :: Maybe (String), "BeginOffset" :: Maybe (Int), "EndOffset" :: Maybe (Int) }
 ```
 
 <p>Provides information about an entity. </p> <p> </p>
@@ -897,7 +897,7 @@ Constructs Entity from required parameters
 #### `newEntity'`
 
 ``` purescript
-newEntity' :: ({ "Score" :: NullOrUndefined (Number), "Type" :: NullOrUndefined (EntityType), "Text" :: NullOrUndefined (String), "BeginOffset" :: NullOrUndefined (Int), "EndOffset" :: NullOrUndefined (Int) } -> { "Score" :: NullOrUndefined (Number), "Type" :: NullOrUndefined (EntityType), "Text" :: NullOrUndefined (String), "BeginOffset" :: NullOrUndefined (Int), "EndOffset" :: NullOrUndefined (Int) }) -> Entity
+newEntity' :: ({ "Score" :: Maybe (Number), "Type" :: Maybe (EntityType), "Text" :: Maybe (String), "BeginOffset" :: Maybe (Int), "EndOffset" :: Maybe (Int) } -> { "Score" :: Maybe (Number), "Type" :: Maybe (EntityType), "Text" :: Maybe (String), "BeginOffset" :: Maybe (Int), "EndOffset" :: Maybe (Int) }) -> Entity
 ```
 
 Constructs Entity's fields from required parameters
@@ -938,7 +938,7 @@ Encode IamRoleArn
 
 ``` purescript
 newtype InputDataConfig
-  = InputDataConfig { "S3Uri" :: S3Uri, "InputFormat" :: NullOrUndefined (InputFormat) }
+  = InputDataConfig { "S3Uri" :: S3Uri, "InputFormat" :: Maybe (InputFormat) }
 ```
 
 <p>The input properties for a topic detection job.</p>
@@ -963,7 +963,7 @@ Constructs InputDataConfig from required parameters
 #### `newInputDataConfig'`
 
 ``` purescript
-newInputDataConfig' :: S3Uri -> ({ "S3Uri" :: S3Uri, "InputFormat" :: NullOrUndefined (InputFormat) } -> { "S3Uri" :: S3Uri, "InputFormat" :: NullOrUndefined (InputFormat) }) -> InputDataConfig
+newInputDataConfig' :: S3Uri -> ({ "S3Uri" :: S3Uri, "InputFormat" :: Maybe (InputFormat) } -> { "S3Uri" :: S3Uri, "InputFormat" :: Maybe (InputFormat) }) -> InputDataConfig
 ```
 
 Constructs InputDataConfig's fields from required parameters
@@ -988,7 +988,7 @@ Encode InputFormat
 
 ``` purescript
 newtype InternalServerException
-  = InternalServerException { "Message" :: NullOrUndefined (String) }
+  = InternalServerException { "Message" :: Maybe (String) }
 ```
 
 <p>An internal server error occurred. Retry your request.</p>
@@ -1013,7 +1013,7 @@ Constructs InternalServerException from required parameters
 #### `newInternalServerException'`
 
 ``` purescript
-newInternalServerException' :: ({ "Message" :: NullOrUndefined (String) } -> { "Message" :: NullOrUndefined (String) }) -> InternalServerException
+newInternalServerException' :: ({ "Message" :: Maybe (String) } -> { "Message" :: Maybe (String) }) -> InternalServerException
 ```
 
 Constructs InternalServerException's fields from required parameters
@@ -1022,7 +1022,7 @@ Constructs InternalServerException's fields from required parameters
 
 ``` purescript
 newtype InvalidFilterException
-  = InvalidFilterException { "Message" :: NullOrUndefined (String) }
+  = InvalidFilterException { "Message" :: Maybe (String) }
 ```
 
 <p>The filter specified for the <code>ListTopicDetectionJobs</code> operation is invalid. Specify a different filter.</p>
@@ -1047,7 +1047,7 @@ Constructs InvalidFilterException from required parameters
 #### `newInvalidFilterException'`
 
 ``` purescript
-newInvalidFilterException' :: ({ "Message" :: NullOrUndefined (String) } -> { "Message" :: NullOrUndefined (String) }) -> InvalidFilterException
+newInvalidFilterException' :: ({ "Message" :: Maybe (String) } -> { "Message" :: Maybe (String) }) -> InvalidFilterException
 ```
 
 Constructs InvalidFilterException's fields from required parameters
@@ -1056,7 +1056,7 @@ Constructs InvalidFilterException's fields from required parameters
 
 ``` purescript
 newtype InvalidRequestException
-  = InvalidRequestException { "Message" :: NullOrUndefined (String) }
+  = InvalidRequestException { "Message" :: Maybe (String) }
 ```
 
 <p>The request is invalid.</p>
@@ -1081,7 +1081,7 @@ Constructs InvalidRequestException from required parameters
 #### `newInvalidRequestException'`
 
 ``` purescript
-newInvalidRequestException' :: ({ "Message" :: NullOrUndefined (String) } -> { "Message" :: NullOrUndefined (String) }) -> InvalidRequestException
+newInvalidRequestException' :: ({ "Message" :: Maybe (String) } -> { "Message" :: Maybe (String) }) -> InvalidRequestException
 ```
 
 Constructs InvalidRequestException's fields from required parameters
@@ -1122,7 +1122,7 @@ Encode JobName
 
 ``` purescript
 newtype JobNotFoundException
-  = JobNotFoundException { "Message" :: NullOrUndefined (String) }
+  = JobNotFoundException { "Message" :: Maybe (String) }
 ```
 
 <p>The specified job was not found. Check the job ID and try again.</p>
@@ -1147,7 +1147,7 @@ Constructs JobNotFoundException from required parameters
 #### `newJobNotFoundException'`
 
 ``` purescript
-newJobNotFoundException' :: ({ "Message" :: NullOrUndefined (String) } -> { "Message" :: NullOrUndefined (String) }) -> JobNotFoundException
+newJobNotFoundException' :: ({ "Message" :: Maybe (String) } -> { "Message" :: Maybe (String) }) -> JobNotFoundException
 ```
 
 Constructs JobNotFoundException's fields from required parameters
@@ -1172,7 +1172,7 @@ Encode JobStatus
 
 ``` purescript
 newtype KeyPhrase
-  = KeyPhrase { "Score" :: NullOrUndefined (Number), "Text" :: NullOrUndefined (String), "BeginOffset" :: NullOrUndefined (Int), "EndOffset" :: NullOrUndefined (Int) }
+  = KeyPhrase { "Score" :: Maybe (Number), "Text" :: Maybe (String), "BeginOffset" :: Maybe (Int), "EndOffset" :: Maybe (Int) }
 ```
 
 <p>Describes a key noun phrase.</p>
@@ -1197,7 +1197,7 @@ Constructs KeyPhrase from required parameters
 #### `newKeyPhrase'`
 
 ``` purescript
-newKeyPhrase' :: ({ "Score" :: NullOrUndefined (Number), "Text" :: NullOrUndefined (String), "BeginOffset" :: NullOrUndefined (Int), "EndOffset" :: NullOrUndefined (Int) } -> { "Score" :: NullOrUndefined (Number), "Text" :: NullOrUndefined (String), "BeginOffset" :: NullOrUndefined (Int), "EndOffset" :: NullOrUndefined (Int) }) -> KeyPhrase
+newKeyPhrase' :: ({ "Score" :: Maybe (Number), "Text" :: Maybe (String), "BeginOffset" :: Maybe (Int), "EndOffset" :: Maybe (Int) } -> { "Score" :: Maybe (Number), "Text" :: Maybe (String), "BeginOffset" :: Maybe (Int), "EndOffset" :: Maybe (Int) }) -> KeyPhrase
 ```
 
 Constructs KeyPhrase's fields from required parameters
@@ -1334,7 +1334,7 @@ Encode ListOfKeyPhrases
 
 ``` purescript
 newtype ListTopicsDetectionJobsRequest
-  = ListTopicsDetectionJobsRequest { "Filter" :: NullOrUndefined (TopicsDetectionJobFilter), "NextToken" :: NullOrUndefined (String), "MaxResults" :: NullOrUndefined (MaxResultsInteger) }
+  = ListTopicsDetectionJobsRequest { "Filter" :: Maybe (TopicsDetectionJobFilter), "NextToken" :: Maybe (String), "MaxResults" :: Maybe (MaxResultsInteger) }
 ```
 
 ##### Instances
@@ -1357,7 +1357,7 @@ Constructs ListTopicsDetectionJobsRequest from required parameters
 #### `newListTopicsDetectionJobsRequest'`
 
 ``` purescript
-newListTopicsDetectionJobsRequest' :: ({ "Filter" :: NullOrUndefined (TopicsDetectionJobFilter), "NextToken" :: NullOrUndefined (String), "MaxResults" :: NullOrUndefined (MaxResultsInteger) } -> { "Filter" :: NullOrUndefined (TopicsDetectionJobFilter), "NextToken" :: NullOrUndefined (String), "MaxResults" :: NullOrUndefined (MaxResultsInteger) }) -> ListTopicsDetectionJobsRequest
+newListTopicsDetectionJobsRequest' :: ({ "Filter" :: Maybe (TopicsDetectionJobFilter), "NextToken" :: Maybe (String), "MaxResults" :: Maybe (MaxResultsInteger) } -> { "Filter" :: Maybe (TopicsDetectionJobFilter), "NextToken" :: Maybe (String), "MaxResults" :: Maybe (MaxResultsInteger) }) -> ListTopicsDetectionJobsRequest
 ```
 
 Constructs ListTopicsDetectionJobsRequest's fields from required parameters
@@ -1366,7 +1366,7 @@ Constructs ListTopicsDetectionJobsRequest's fields from required parameters
 
 ``` purescript
 newtype ListTopicsDetectionJobsResponse
-  = ListTopicsDetectionJobsResponse { "TopicsDetectionJobPropertiesList" :: NullOrUndefined (TopicsDetectionJobPropertiesList), "NextToken" :: NullOrUndefined (String) }
+  = ListTopicsDetectionJobsResponse { "TopicsDetectionJobPropertiesList" :: Maybe (TopicsDetectionJobPropertiesList), "NextToken" :: Maybe (String) }
 ```
 
 ##### Instances
@@ -1389,7 +1389,7 @@ Constructs ListTopicsDetectionJobsResponse from required parameters
 #### `newListTopicsDetectionJobsResponse'`
 
 ``` purescript
-newListTopicsDetectionJobsResponse' :: ({ "TopicsDetectionJobPropertiesList" :: NullOrUndefined (TopicsDetectionJobPropertiesList), "NextToken" :: NullOrUndefined (String) } -> { "TopicsDetectionJobPropertiesList" :: NullOrUndefined (TopicsDetectionJobPropertiesList), "NextToken" :: NullOrUndefined (String) }) -> ListTopicsDetectionJobsResponse
+newListTopicsDetectionJobsResponse' :: ({ "TopicsDetectionJobPropertiesList" :: Maybe (TopicsDetectionJobPropertiesList), "NextToken" :: Maybe (String) } -> { "TopicsDetectionJobPropertiesList" :: Maybe (TopicsDetectionJobPropertiesList), "NextToken" :: Maybe (String) }) -> ListTopicsDetectionJobsResponse
 ```
 
 Constructs ListTopicsDetectionJobsResponse's fields from required parameters
@@ -1480,7 +1480,7 @@ Encode S3Uri
 
 ``` purescript
 newtype SentimentScore
-  = SentimentScore { "Positive" :: NullOrUndefined (Number), "Negative" :: NullOrUndefined (Number), "Neutral" :: NullOrUndefined (Number), "Mixed" :: NullOrUndefined (Number) }
+  = SentimentScore { "Positive" :: Maybe (Number), "Negative" :: Maybe (Number), "Neutral" :: Maybe (Number), "Mixed" :: Maybe (Number) }
 ```
 
 <p>Describes the level of confidence that Amazon Comprehend has in the accuracy of its detection of sentiments.</p>
@@ -1505,7 +1505,7 @@ Constructs SentimentScore from required parameters
 #### `newSentimentScore'`
 
 ``` purescript
-newSentimentScore' :: ({ "Positive" :: NullOrUndefined (Number), "Negative" :: NullOrUndefined (Number), "Neutral" :: NullOrUndefined (Number), "Mixed" :: NullOrUndefined (Number) } -> { "Positive" :: NullOrUndefined (Number), "Negative" :: NullOrUndefined (Number), "Neutral" :: NullOrUndefined (Number), "Mixed" :: NullOrUndefined (Number) }) -> SentimentScore
+newSentimentScore' :: ({ "Positive" :: Maybe (Number), "Negative" :: Maybe (Number), "Neutral" :: Maybe (Number), "Mixed" :: Maybe (Number) } -> { "Positive" :: Maybe (Number), "Negative" :: Maybe (Number), "Neutral" :: Maybe (Number), "Mixed" :: Maybe (Number) }) -> SentimentScore
 ```
 
 Constructs SentimentScore's fields from required parameters
@@ -1530,7 +1530,7 @@ Encode SentimentType
 
 ``` purescript
 newtype StartTopicsDetectionJobRequest
-  = StartTopicsDetectionJobRequest { "InputDataConfig" :: InputDataConfig, "OutputDataConfig" :: OutputDataConfig, "DataAccessRoleArn" :: IamRoleArn, "JobName" :: NullOrUndefined (JobName), "NumberOfTopics" :: NullOrUndefined (NumberOfTopicsInteger), "ClientRequestToken" :: NullOrUndefined (ClientRequestTokenString) }
+  = StartTopicsDetectionJobRequest { "InputDataConfig" :: InputDataConfig, "OutputDataConfig" :: OutputDataConfig, "DataAccessRoleArn" :: IamRoleArn, "JobName" :: Maybe (JobName), "NumberOfTopics" :: Maybe (NumberOfTopicsInteger), "ClientRequestToken" :: Maybe (ClientRequestTokenString) }
 ```
 
 ##### Instances
@@ -1553,7 +1553,7 @@ Constructs StartTopicsDetectionJobRequest from required parameters
 #### `newStartTopicsDetectionJobRequest'`
 
 ``` purescript
-newStartTopicsDetectionJobRequest' :: IamRoleArn -> InputDataConfig -> OutputDataConfig -> ({ "InputDataConfig" :: InputDataConfig, "OutputDataConfig" :: OutputDataConfig, "DataAccessRoleArn" :: IamRoleArn, "JobName" :: NullOrUndefined (JobName), "NumberOfTopics" :: NullOrUndefined (NumberOfTopicsInteger), "ClientRequestToken" :: NullOrUndefined (ClientRequestTokenString) } -> { "InputDataConfig" :: InputDataConfig, "OutputDataConfig" :: OutputDataConfig, "DataAccessRoleArn" :: IamRoleArn, "JobName" :: NullOrUndefined (JobName), "NumberOfTopics" :: NullOrUndefined (NumberOfTopicsInteger), "ClientRequestToken" :: NullOrUndefined (ClientRequestTokenString) }) -> StartTopicsDetectionJobRequest
+newStartTopicsDetectionJobRequest' :: IamRoleArn -> InputDataConfig -> OutputDataConfig -> ({ "InputDataConfig" :: InputDataConfig, "OutputDataConfig" :: OutputDataConfig, "DataAccessRoleArn" :: IamRoleArn, "JobName" :: Maybe (JobName), "NumberOfTopics" :: Maybe (NumberOfTopicsInteger), "ClientRequestToken" :: Maybe (ClientRequestTokenString) } -> { "InputDataConfig" :: InputDataConfig, "OutputDataConfig" :: OutputDataConfig, "DataAccessRoleArn" :: IamRoleArn, "JobName" :: Maybe (JobName), "NumberOfTopics" :: Maybe (NumberOfTopicsInteger), "ClientRequestToken" :: Maybe (ClientRequestTokenString) }) -> StartTopicsDetectionJobRequest
 ```
 
 Constructs StartTopicsDetectionJobRequest's fields from required parameters
@@ -1562,7 +1562,7 @@ Constructs StartTopicsDetectionJobRequest's fields from required parameters
 
 ``` purescript
 newtype StartTopicsDetectionJobResponse
-  = StartTopicsDetectionJobResponse { "JobId" :: NullOrUndefined (JobId), "JobStatus" :: NullOrUndefined (JobStatus) }
+  = StartTopicsDetectionJobResponse { "JobId" :: Maybe (JobId), "JobStatus" :: Maybe (JobStatus) }
 ```
 
 ##### Instances
@@ -1585,7 +1585,7 @@ Constructs StartTopicsDetectionJobResponse from required parameters
 #### `newStartTopicsDetectionJobResponse'`
 
 ``` purescript
-newStartTopicsDetectionJobResponse' :: ({ "JobId" :: NullOrUndefined (JobId), "JobStatus" :: NullOrUndefined (JobStatus) } -> { "JobId" :: NullOrUndefined (JobId), "JobStatus" :: NullOrUndefined (JobStatus) }) -> StartTopicsDetectionJobResponse
+newStartTopicsDetectionJobResponse' :: ({ "JobId" :: Maybe (JobId), "JobStatus" :: Maybe (JobStatus) } -> { "JobId" :: Maybe (JobId), "JobStatus" :: Maybe (JobStatus) }) -> StartTopicsDetectionJobResponse
 ```
 
 Constructs StartTopicsDetectionJobResponse's fields from required parameters
@@ -1610,7 +1610,7 @@ Encode StringList
 
 ``` purescript
 newtype TextSizeLimitExceededException
-  = TextSizeLimitExceededException { "Message" :: NullOrUndefined (String) }
+  = TextSizeLimitExceededException { "Message" :: Maybe (String) }
 ```
 
 <p>The size of the input text exceeds the limit. Use a smaller document.</p>
@@ -1635,7 +1635,7 @@ Constructs TextSizeLimitExceededException from required parameters
 #### `newTextSizeLimitExceededException'`
 
 ``` purescript
-newTextSizeLimitExceededException' :: ({ "Message" :: NullOrUndefined (String) } -> { "Message" :: NullOrUndefined (String) }) -> TextSizeLimitExceededException
+newTextSizeLimitExceededException' :: ({ "Message" :: Maybe (String) } -> { "Message" :: Maybe (String) }) -> TextSizeLimitExceededException
 ```
 
 Constructs TextSizeLimitExceededException's fields from required parameters
@@ -1644,7 +1644,7 @@ Constructs TextSizeLimitExceededException's fields from required parameters
 
 ``` purescript
 newtype TooManyRequestsException
-  = TooManyRequestsException { "Message" :: NullOrUndefined (String) }
+  = TooManyRequestsException { "Message" :: Maybe (String) }
 ```
 
 <p>The number of requests exceeds the limit. Resubmit your request later.</p>
@@ -1669,7 +1669,7 @@ Constructs TooManyRequestsException from required parameters
 #### `newTooManyRequestsException'`
 
 ``` purescript
-newTooManyRequestsException' :: ({ "Message" :: NullOrUndefined (String) } -> { "Message" :: NullOrUndefined (String) }) -> TooManyRequestsException
+newTooManyRequestsException' :: ({ "Message" :: Maybe (String) } -> { "Message" :: Maybe (String) }) -> TooManyRequestsException
 ```
 
 Constructs TooManyRequestsException's fields from required parameters
@@ -1678,7 +1678,7 @@ Constructs TooManyRequestsException's fields from required parameters
 
 ``` purescript
 newtype TopicsDetectionJobFilter
-  = TopicsDetectionJobFilter { "JobName" :: NullOrUndefined (JobName), "JobStatus" :: NullOrUndefined (JobStatus), "SubmitTimeBefore" :: NullOrUndefined (Timestamp), "SubmitTimeAfter" :: NullOrUndefined (Timestamp) }
+  = TopicsDetectionJobFilter { "JobName" :: Maybe (JobName), "JobStatus" :: Maybe (JobStatus), "SubmitTimeBefore" :: Maybe (Timestamp), "SubmitTimeAfter" :: Maybe (Timestamp) }
 ```
 
 <p>Provides information for filtering topic detection jobs. For more information, see .</p>
@@ -1703,7 +1703,7 @@ Constructs TopicsDetectionJobFilter from required parameters
 #### `newTopicsDetectionJobFilter'`
 
 ``` purescript
-newTopicsDetectionJobFilter' :: ({ "JobName" :: NullOrUndefined (JobName), "JobStatus" :: NullOrUndefined (JobStatus), "SubmitTimeBefore" :: NullOrUndefined (Timestamp), "SubmitTimeAfter" :: NullOrUndefined (Timestamp) } -> { "JobName" :: NullOrUndefined (JobName), "JobStatus" :: NullOrUndefined (JobStatus), "SubmitTimeBefore" :: NullOrUndefined (Timestamp), "SubmitTimeAfter" :: NullOrUndefined (Timestamp) }) -> TopicsDetectionJobFilter
+newTopicsDetectionJobFilter' :: ({ "JobName" :: Maybe (JobName), "JobStatus" :: Maybe (JobStatus), "SubmitTimeBefore" :: Maybe (Timestamp), "SubmitTimeAfter" :: Maybe (Timestamp) } -> { "JobName" :: Maybe (JobName), "JobStatus" :: Maybe (JobStatus), "SubmitTimeBefore" :: Maybe (Timestamp), "SubmitTimeAfter" :: Maybe (Timestamp) }) -> TopicsDetectionJobFilter
 ```
 
 Constructs TopicsDetectionJobFilter's fields from required parameters
@@ -1712,7 +1712,7 @@ Constructs TopicsDetectionJobFilter's fields from required parameters
 
 ``` purescript
 newtype TopicsDetectionJobProperties
-  = TopicsDetectionJobProperties { "JobId" :: NullOrUndefined (JobId), "JobName" :: NullOrUndefined (JobName), "JobStatus" :: NullOrUndefined (JobStatus), "Message" :: NullOrUndefined (AnyLengthString), "SubmitTime" :: NullOrUndefined (Timestamp), "EndTime" :: NullOrUndefined (Timestamp), "InputDataConfig" :: NullOrUndefined (InputDataConfig), "OutputDataConfig" :: NullOrUndefined (OutputDataConfig), "NumberOfTopics" :: NullOrUndefined (Int) }
+  = TopicsDetectionJobProperties { "JobId" :: Maybe (JobId), "JobName" :: Maybe (JobName), "JobStatus" :: Maybe (JobStatus), "Message" :: Maybe (AnyLengthString), "SubmitTime" :: Maybe (Timestamp), "EndTime" :: Maybe (Timestamp), "InputDataConfig" :: Maybe (InputDataConfig), "OutputDataConfig" :: Maybe (OutputDataConfig), "NumberOfTopics" :: Maybe (Int) }
 ```
 
 <p>Provides information about a topic detection job.</p>
@@ -1737,7 +1737,7 @@ Constructs TopicsDetectionJobProperties from required parameters
 #### `newTopicsDetectionJobProperties'`
 
 ``` purescript
-newTopicsDetectionJobProperties' :: ({ "JobId" :: NullOrUndefined (JobId), "JobName" :: NullOrUndefined (JobName), "JobStatus" :: NullOrUndefined (JobStatus), "Message" :: NullOrUndefined (AnyLengthString), "SubmitTime" :: NullOrUndefined (Timestamp), "EndTime" :: NullOrUndefined (Timestamp), "InputDataConfig" :: NullOrUndefined (InputDataConfig), "OutputDataConfig" :: NullOrUndefined (OutputDataConfig), "NumberOfTopics" :: NullOrUndefined (Int) } -> { "JobId" :: NullOrUndefined (JobId), "JobName" :: NullOrUndefined (JobName), "JobStatus" :: NullOrUndefined (JobStatus), "Message" :: NullOrUndefined (AnyLengthString), "SubmitTime" :: NullOrUndefined (Timestamp), "EndTime" :: NullOrUndefined (Timestamp), "InputDataConfig" :: NullOrUndefined (InputDataConfig), "OutputDataConfig" :: NullOrUndefined (OutputDataConfig), "NumberOfTopics" :: NullOrUndefined (Int) }) -> TopicsDetectionJobProperties
+newTopicsDetectionJobProperties' :: ({ "JobId" :: Maybe (JobId), "JobName" :: Maybe (JobName), "JobStatus" :: Maybe (JobStatus), "Message" :: Maybe (AnyLengthString), "SubmitTime" :: Maybe (Timestamp), "EndTime" :: Maybe (Timestamp), "InputDataConfig" :: Maybe (InputDataConfig), "OutputDataConfig" :: Maybe (OutputDataConfig), "NumberOfTopics" :: Maybe (Int) } -> { "JobId" :: Maybe (JobId), "JobName" :: Maybe (JobName), "JobStatus" :: Maybe (JobStatus), "Message" :: Maybe (AnyLengthString), "SubmitTime" :: Maybe (Timestamp), "EndTime" :: Maybe (Timestamp), "InputDataConfig" :: Maybe (InputDataConfig), "OutputDataConfig" :: Maybe (OutputDataConfig), "NumberOfTopics" :: Maybe (Int) }) -> TopicsDetectionJobProperties
 ```
 
 Constructs TopicsDetectionJobProperties's fields from required parameters
@@ -1762,7 +1762,7 @@ Encode TopicsDetectionJobPropertiesList
 
 ``` purescript
 newtype UnsupportedLanguageException
-  = UnsupportedLanguageException { "Message" :: NullOrUndefined (String) }
+  = UnsupportedLanguageException { "Message" :: Maybe (String) }
 ```
 
 <p>Amazon Comprehend can't process the language of the input text. For all APIs except <code>DetectDominantLanguage</code>, Amazon Comprehend accepts only English or Spanish text. For the <code>DetectDominantLanguage</code> API, Amazon Comprehend detects 100 languages. For a list of languages, see <a>how-languages</a> </p>
@@ -1787,7 +1787,7 @@ Constructs UnsupportedLanguageException from required parameters
 #### `newUnsupportedLanguageException'`
 
 ``` purescript
-newUnsupportedLanguageException' :: ({ "Message" :: NullOrUndefined (String) } -> { "Message" :: NullOrUndefined (String) }) -> UnsupportedLanguageException
+newUnsupportedLanguageException' :: ({ "Message" :: Maybe (String) } -> { "Message" :: Maybe (String) }) -> UnsupportedLanguageException
 ```
 
 Constructs UnsupportedLanguageException's fields from required parameters

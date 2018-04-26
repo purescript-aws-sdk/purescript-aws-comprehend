@@ -5,7 +5,6 @@ import Prelude
 import Data.Foreign.Class (class Decode, class Encode)
 import Data.Foreign.Generic (defaultOptions, genericDecode, genericEncode)
 import Data.Foreign.Generic.Types (Options)
-import Data.Foreign.NullOrUndefined (NullOrUndefined(..))
 import Data.Generic.Rep (class Generic)
 import Data.Generic.Rep.Show (genericShow)
 import Data.Maybe (Maybe(..))
@@ -29,8 +28,8 @@ instance encodeAnyLengthString :: Encode AnyLengthString where encode = genericE
 
 -- | <p>The result of calling the operation. The operation returns one object for each document that is successfully processed by the operation.</p>
 newtype BatchDetectDominantLanguageItemResult = BatchDetectDominantLanguageItemResult 
-  { "Index" :: NullOrUndefined (Int)
-  , "Languages" :: NullOrUndefined (ListOfDominantLanguages)
+  { "Index" :: Maybe (Int)
+  , "Languages" :: Maybe (ListOfDominantLanguages)
   }
 derive instance newtypeBatchDetectDominantLanguageItemResult :: Newtype BatchDetectDominantLanguageItemResult _
 derive instance repGenericBatchDetectDominantLanguageItemResult :: Generic BatchDetectDominantLanguageItemResult _
@@ -40,12 +39,12 @@ instance encodeBatchDetectDominantLanguageItemResult :: Encode BatchDetectDomina
 
 -- | Constructs BatchDetectDominantLanguageItemResult from required parameters
 newBatchDetectDominantLanguageItemResult :: BatchDetectDominantLanguageItemResult
-newBatchDetectDominantLanguageItemResult  = BatchDetectDominantLanguageItemResult { "Index": (NullOrUndefined Nothing), "Languages": (NullOrUndefined Nothing) }
+newBatchDetectDominantLanguageItemResult  = BatchDetectDominantLanguageItemResult { "Index": Nothing, "Languages": Nothing }
 
 -- | Constructs BatchDetectDominantLanguageItemResult's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newBatchDetectDominantLanguageItemResult' :: ( { "Index" :: NullOrUndefined (Int) , "Languages" :: NullOrUndefined (ListOfDominantLanguages) } -> {"Index" :: NullOrUndefined (Int) , "Languages" :: NullOrUndefined (ListOfDominantLanguages) } ) -> BatchDetectDominantLanguageItemResult
-newBatchDetectDominantLanguageItemResult'  customize = (BatchDetectDominantLanguageItemResult <<< customize) { "Index": (NullOrUndefined Nothing), "Languages": (NullOrUndefined Nothing) }
+newBatchDetectDominantLanguageItemResult' :: ( { "Index" :: Maybe (Int) , "Languages" :: Maybe (ListOfDominantLanguages) } -> {"Index" :: Maybe (Int) , "Languages" :: Maybe (ListOfDominantLanguages) } ) -> BatchDetectDominantLanguageItemResult
+newBatchDetectDominantLanguageItemResult'  customize = (BatchDetectDominantLanguageItemResult <<< customize) { "Index": Nothing, "Languages": Nothing }
 
 
 
@@ -92,8 +91,8 @@ newBatchDetectDominantLanguageResponse' _ErrorList _ResultList customize = (Batc
 
 -- | <p>The result of calling the operation. The operation returns one object for each document that is successfully processed by the operation.</p>
 newtype BatchDetectEntitiesItemResult = BatchDetectEntitiesItemResult 
-  { "Index" :: NullOrUndefined (Int)
-  , "Entities" :: NullOrUndefined (ListOfEntities)
+  { "Index" :: Maybe (Int)
+  , "Entities" :: Maybe (ListOfEntities)
   }
 derive instance newtypeBatchDetectEntitiesItemResult :: Newtype BatchDetectEntitiesItemResult _
 derive instance repGenericBatchDetectEntitiesItemResult :: Generic BatchDetectEntitiesItemResult _
@@ -103,12 +102,12 @@ instance encodeBatchDetectEntitiesItemResult :: Encode BatchDetectEntitiesItemRe
 
 -- | Constructs BatchDetectEntitiesItemResult from required parameters
 newBatchDetectEntitiesItemResult :: BatchDetectEntitiesItemResult
-newBatchDetectEntitiesItemResult  = BatchDetectEntitiesItemResult { "Entities": (NullOrUndefined Nothing), "Index": (NullOrUndefined Nothing) }
+newBatchDetectEntitiesItemResult  = BatchDetectEntitiesItemResult { "Entities": Nothing, "Index": Nothing }
 
 -- | Constructs BatchDetectEntitiesItemResult's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newBatchDetectEntitiesItemResult' :: ( { "Index" :: NullOrUndefined (Int) , "Entities" :: NullOrUndefined (ListOfEntities) } -> {"Index" :: NullOrUndefined (Int) , "Entities" :: NullOrUndefined (ListOfEntities) } ) -> BatchDetectEntitiesItemResult
-newBatchDetectEntitiesItemResult'  customize = (BatchDetectEntitiesItemResult <<< customize) { "Entities": (NullOrUndefined Nothing), "Index": (NullOrUndefined Nothing) }
+newBatchDetectEntitiesItemResult' :: ( { "Index" :: Maybe (Int) , "Entities" :: Maybe (ListOfEntities) } -> {"Index" :: Maybe (Int) , "Entities" :: Maybe (ListOfEntities) } ) -> BatchDetectEntitiesItemResult
+newBatchDetectEntitiesItemResult'  customize = (BatchDetectEntitiesItemResult <<< customize) { "Entities": Nothing, "Index": Nothing }
 
 
 
@@ -156,8 +155,8 @@ newBatchDetectEntitiesResponse' _ErrorList _ResultList customize = (BatchDetectE
 
 -- | <p>The result of calling the operation. The operation returns one object for each document that is successfully processed by the operation.</p>
 newtype BatchDetectKeyPhrasesItemResult = BatchDetectKeyPhrasesItemResult 
-  { "Index" :: NullOrUndefined (Int)
-  , "KeyPhrases" :: NullOrUndefined (ListOfKeyPhrases)
+  { "Index" :: Maybe (Int)
+  , "KeyPhrases" :: Maybe (ListOfKeyPhrases)
   }
 derive instance newtypeBatchDetectKeyPhrasesItemResult :: Newtype BatchDetectKeyPhrasesItemResult _
 derive instance repGenericBatchDetectKeyPhrasesItemResult :: Generic BatchDetectKeyPhrasesItemResult _
@@ -167,12 +166,12 @@ instance encodeBatchDetectKeyPhrasesItemResult :: Encode BatchDetectKeyPhrasesIt
 
 -- | Constructs BatchDetectKeyPhrasesItemResult from required parameters
 newBatchDetectKeyPhrasesItemResult :: BatchDetectKeyPhrasesItemResult
-newBatchDetectKeyPhrasesItemResult  = BatchDetectKeyPhrasesItemResult { "Index": (NullOrUndefined Nothing), "KeyPhrases": (NullOrUndefined Nothing) }
+newBatchDetectKeyPhrasesItemResult  = BatchDetectKeyPhrasesItemResult { "Index": Nothing, "KeyPhrases": Nothing }
 
 -- | Constructs BatchDetectKeyPhrasesItemResult's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newBatchDetectKeyPhrasesItemResult' :: ( { "Index" :: NullOrUndefined (Int) , "KeyPhrases" :: NullOrUndefined (ListOfKeyPhrases) } -> {"Index" :: NullOrUndefined (Int) , "KeyPhrases" :: NullOrUndefined (ListOfKeyPhrases) } ) -> BatchDetectKeyPhrasesItemResult
-newBatchDetectKeyPhrasesItemResult'  customize = (BatchDetectKeyPhrasesItemResult <<< customize) { "Index": (NullOrUndefined Nothing), "KeyPhrases": (NullOrUndefined Nothing) }
+newBatchDetectKeyPhrasesItemResult' :: ( { "Index" :: Maybe (Int) , "KeyPhrases" :: Maybe (ListOfKeyPhrases) } -> {"Index" :: Maybe (Int) , "KeyPhrases" :: Maybe (ListOfKeyPhrases) } ) -> BatchDetectKeyPhrasesItemResult
+newBatchDetectKeyPhrasesItemResult'  customize = (BatchDetectKeyPhrasesItemResult <<< customize) { "Index": Nothing, "KeyPhrases": Nothing }
 
 
 
@@ -220,9 +219,9 @@ newBatchDetectKeyPhrasesResponse' _ErrorList _ResultList customize = (BatchDetec
 
 -- | <p>The result of calling the operation. The operation returns one object for each document that is successfully processed by the operation.</p>
 newtype BatchDetectSentimentItemResult = BatchDetectSentimentItemResult 
-  { "Index" :: NullOrUndefined (Int)
-  , "Sentiment" :: NullOrUndefined (SentimentType)
-  , "SentimentScore" :: NullOrUndefined (SentimentScore)
+  { "Index" :: Maybe (Int)
+  , "Sentiment" :: Maybe (SentimentType)
+  , "SentimentScore" :: Maybe (SentimentScore)
   }
 derive instance newtypeBatchDetectSentimentItemResult :: Newtype BatchDetectSentimentItemResult _
 derive instance repGenericBatchDetectSentimentItemResult :: Generic BatchDetectSentimentItemResult _
@@ -232,12 +231,12 @@ instance encodeBatchDetectSentimentItemResult :: Encode BatchDetectSentimentItem
 
 -- | Constructs BatchDetectSentimentItemResult from required parameters
 newBatchDetectSentimentItemResult :: BatchDetectSentimentItemResult
-newBatchDetectSentimentItemResult  = BatchDetectSentimentItemResult { "Index": (NullOrUndefined Nothing), "Sentiment": (NullOrUndefined Nothing), "SentimentScore": (NullOrUndefined Nothing) }
+newBatchDetectSentimentItemResult  = BatchDetectSentimentItemResult { "Index": Nothing, "Sentiment": Nothing, "SentimentScore": Nothing }
 
 -- | Constructs BatchDetectSentimentItemResult's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newBatchDetectSentimentItemResult' :: ( { "Index" :: NullOrUndefined (Int) , "Sentiment" :: NullOrUndefined (SentimentType) , "SentimentScore" :: NullOrUndefined (SentimentScore) } -> {"Index" :: NullOrUndefined (Int) , "Sentiment" :: NullOrUndefined (SentimentType) , "SentimentScore" :: NullOrUndefined (SentimentScore) } ) -> BatchDetectSentimentItemResult
-newBatchDetectSentimentItemResult'  customize = (BatchDetectSentimentItemResult <<< customize) { "Index": (NullOrUndefined Nothing), "Sentiment": (NullOrUndefined Nothing), "SentimentScore": (NullOrUndefined Nothing) }
+newBatchDetectSentimentItemResult' :: ( { "Index" :: Maybe (Int) , "Sentiment" :: Maybe (SentimentType) , "SentimentScore" :: Maybe (SentimentScore) } -> {"Index" :: Maybe (Int) , "Sentiment" :: Maybe (SentimentType) , "SentimentScore" :: Maybe (SentimentScore) } ) -> BatchDetectSentimentItemResult
+newBatchDetectSentimentItemResult'  customize = (BatchDetectSentimentItemResult <<< customize) { "Index": Nothing, "Sentiment": Nothing, "SentimentScore": Nothing }
 
 
 
@@ -285,9 +284,9 @@ newBatchDetectSentimentResponse' _ErrorList _ResultList customize = (BatchDetect
 
 -- | <p>Describes an error that occurred while processing a document in a batch. The operation returns on <code>BatchItemError</code> object for each document that contained an error.</p>
 newtype BatchItemError = BatchItemError 
-  { "Index" :: NullOrUndefined (Int)
-  , "ErrorCode" :: NullOrUndefined (String)
-  , "ErrorMessage" :: NullOrUndefined (String)
+  { "Index" :: Maybe (Int)
+  , "ErrorCode" :: Maybe (String)
+  , "ErrorMessage" :: Maybe (String)
   }
 derive instance newtypeBatchItemError :: Newtype BatchItemError _
 derive instance repGenericBatchItemError :: Generic BatchItemError _
@@ -297,12 +296,12 @@ instance encodeBatchItemError :: Encode BatchItemError where encode = genericEnc
 
 -- | Constructs BatchItemError from required parameters
 newBatchItemError :: BatchItemError
-newBatchItemError  = BatchItemError { "ErrorCode": (NullOrUndefined Nothing), "ErrorMessage": (NullOrUndefined Nothing), "Index": (NullOrUndefined Nothing) }
+newBatchItemError  = BatchItemError { "ErrorCode": Nothing, "ErrorMessage": Nothing, "Index": Nothing }
 
 -- | Constructs BatchItemError's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newBatchItemError' :: ( { "Index" :: NullOrUndefined (Int) , "ErrorCode" :: NullOrUndefined (String) , "ErrorMessage" :: NullOrUndefined (String) } -> {"Index" :: NullOrUndefined (Int) , "ErrorCode" :: NullOrUndefined (String) , "ErrorMessage" :: NullOrUndefined (String) } ) -> BatchItemError
-newBatchItemError'  customize = (BatchItemError <<< customize) { "ErrorCode": (NullOrUndefined Nothing), "ErrorMessage": (NullOrUndefined Nothing), "Index": (NullOrUndefined Nothing) }
+newBatchItemError' :: ( { "Index" :: Maybe (Int) , "ErrorCode" :: Maybe (String) , "ErrorMessage" :: Maybe (String) } -> {"Index" :: Maybe (Int) , "ErrorCode" :: Maybe (String) , "ErrorMessage" :: Maybe (String) } ) -> BatchItemError
+newBatchItemError'  customize = (BatchItemError <<< customize) { "ErrorCode": Nothing, "ErrorMessage": Nothing, "Index": Nothing }
 
 
 
@@ -317,7 +316,7 @@ instance encodeBatchItemErrorList :: Encode BatchItemErrorList where encode = ge
 
 -- | <p>The number of documents in the request exceeds the limit of 25. Try your request again with fewer documents.</p>
 newtype BatchSizeLimitExceededException = BatchSizeLimitExceededException 
-  { "Message" :: NullOrUndefined (String)
+  { "Message" :: Maybe (String)
   }
 derive instance newtypeBatchSizeLimitExceededException :: Newtype BatchSizeLimitExceededException _
 derive instance repGenericBatchSizeLimitExceededException :: Generic BatchSizeLimitExceededException _
@@ -327,12 +326,12 @@ instance encodeBatchSizeLimitExceededException :: Encode BatchSizeLimitExceededE
 
 -- | Constructs BatchSizeLimitExceededException from required parameters
 newBatchSizeLimitExceededException :: BatchSizeLimitExceededException
-newBatchSizeLimitExceededException  = BatchSizeLimitExceededException { "Message": (NullOrUndefined Nothing) }
+newBatchSizeLimitExceededException  = BatchSizeLimitExceededException { "Message": Nothing }
 
 -- | Constructs BatchSizeLimitExceededException's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newBatchSizeLimitExceededException' :: ( { "Message" :: NullOrUndefined (String) } -> {"Message" :: NullOrUndefined (String) } ) -> BatchSizeLimitExceededException
-newBatchSizeLimitExceededException'  customize = (BatchSizeLimitExceededException <<< customize) { "Message": (NullOrUndefined Nothing) }
+newBatchSizeLimitExceededException' :: ( { "Message" :: Maybe (String) } -> {"Message" :: Maybe (String) } ) -> BatchSizeLimitExceededException
+newBatchSizeLimitExceededException'  customize = (BatchSizeLimitExceededException <<< customize) { "Message": Nothing }
 
 
 
@@ -366,7 +365,7 @@ newDescribeTopicsDetectionJobRequest' _JobId customize = (DescribeTopicsDetectio
 
 
 newtype DescribeTopicsDetectionJobResponse = DescribeTopicsDetectionJobResponse 
-  { "TopicsDetectionJobProperties" :: NullOrUndefined (TopicsDetectionJobProperties)
+  { "TopicsDetectionJobProperties" :: Maybe (TopicsDetectionJobProperties)
   }
 derive instance newtypeDescribeTopicsDetectionJobResponse :: Newtype DescribeTopicsDetectionJobResponse _
 derive instance repGenericDescribeTopicsDetectionJobResponse :: Generic DescribeTopicsDetectionJobResponse _
@@ -376,12 +375,12 @@ instance encodeDescribeTopicsDetectionJobResponse :: Encode DescribeTopicsDetect
 
 -- | Constructs DescribeTopicsDetectionJobResponse from required parameters
 newDescribeTopicsDetectionJobResponse :: DescribeTopicsDetectionJobResponse
-newDescribeTopicsDetectionJobResponse  = DescribeTopicsDetectionJobResponse { "TopicsDetectionJobProperties": (NullOrUndefined Nothing) }
+newDescribeTopicsDetectionJobResponse  = DescribeTopicsDetectionJobResponse { "TopicsDetectionJobProperties": Nothing }
 
 -- | Constructs DescribeTopicsDetectionJobResponse's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newDescribeTopicsDetectionJobResponse' :: ( { "TopicsDetectionJobProperties" :: NullOrUndefined (TopicsDetectionJobProperties) } -> {"TopicsDetectionJobProperties" :: NullOrUndefined (TopicsDetectionJobProperties) } ) -> DescribeTopicsDetectionJobResponse
-newDescribeTopicsDetectionJobResponse'  customize = (DescribeTopicsDetectionJobResponse <<< customize) { "TopicsDetectionJobProperties": (NullOrUndefined Nothing) }
+newDescribeTopicsDetectionJobResponse' :: ( { "TopicsDetectionJobProperties" :: Maybe (TopicsDetectionJobProperties) } -> {"TopicsDetectionJobProperties" :: Maybe (TopicsDetectionJobProperties) } ) -> DescribeTopicsDetectionJobResponse
+newDescribeTopicsDetectionJobResponse'  customize = (DescribeTopicsDetectionJobResponse <<< customize) { "TopicsDetectionJobProperties": Nothing }
 
 
 
@@ -406,7 +405,7 @@ newDetectDominantLanguageRequest' _Text customize = (DetectDominantLanguageReque
 
 
 newtype DetectDominantLanguageResponse = DetectDominantLanguageResponse 
-  { "Languages" :: NullOrUndefined (ListOfDominantLanguages)
+  { "Languages" :: Maybe (ListOfDominantLanguages)
   }
 derive instance newtypeDetectDominantLanguageResponse :: Newtype DetectDominantLanguageResponse _
 derive instance repGenericDetectDominantLanguageResponse :: Generic DetectDominantLanguageResponse _
@@ -416,12 +415,12 @@ instance encodeDetectDominantLanguageResponse :: Encode DetectDominantLanguageRe
 
 -- | Constructs DetectDominantLanguageResponse from required parameters
 newDetectDominantLanguageResponse :: DetectDominantLanguageResponse
-newDetectDominantLanguageResponse  = DetectDominantLanguageResponse { "Languages": (NullOrUndefined Nothing) }
+newDetectDominantLanguageResponse  = DetectDominantLanguageResponse { "Languages": Nothing }
 
 -- | Constructs DetectDominantLanguageResponse's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newDetectDominantLanguageResponse' :: ( { "Languages" :: NullOrUndefined (ListOfDominantLanguages) } -> {"Languages" :: NullOrUndefined (ListOfDominantLanguages) } ) -> DetectDominantLanguageResponse
-newDetectDominantLanguageResponse'  customize = (DetectDominantLanguageResponse <<< customize) { "Languages": (NullOrUndefined Nothing) }
+newDetectDominantLanguageResponse' :: ( { "Languages" :: Maybe (ListOfDominantLanguages) } -> {"Languages" :: Maybe (ListOfDominantLanguages) } ) -> DetectDominantLanguageResponse
+newDetectDominantLanguageResponse'  customize = (DetectDominantLanguageResponse <<< customize) { "Languages": Nothing }
 
 
 
@@ -447,7 +446,7 @@ newDetectEntitiesRequest' _LanguageCode _Text customize = (DetectEntitiesRequest
 
 
 newtype DetectEntitiesResponse = DetectEntitiesResponse 
-  { "Entities" :: NullOrUndefined (ListOfEntities)
+  { "Entities" :: Maybe (ListOfEntities)
   }
 derive instance newtypeDetectEntitiesResponse :: Newtype DetectEntitiesResponse _
 derive instance repGenericDetectEntitiesResponse :: Generic DetectEntitiesResponse _
@@ -457,12 +456,12 @@ instance encodeDetectEntitiesResponse :: Encode DetectEntitiesResponse where enc
 
 -- | Constructs DetectEntitiesResponse from required parameters
 newDetectEntitiesResponse :: DetectEntitiesResponse
-newDetectEntitiesResponse  = DetectEntitiesResponse { "Entities": (NullOrUndefined Nothing) }
+newDetectEntitiesResponse  = DetectEntitiesResponse { "Entities": Nothing }
 
 -- | Constructs DetectEntitiesResponse's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newDetectEntitiesResponse' :: ( { "Entities" :: NullOrUndefined (ListOfEntities) } -> {"Entities" :: NullOrUndefined (ListOfEntities) } ) -> DetectEntitiesResponse
-newDetectEntitiesResponse'  customize = (DetectEntitiesResponse <<< customize) { "Entities": (NullOrUndefined Nothing) }
+newDetectEntitiesResponse' :: ( { "Entities" :: Maybe (ListOfEntities) } -> {"Entities" :: Maybe (ListOfEntities) } ) -> DetectEntitiesResponse
+newDetectEntitiesResponse'  customize = (DetectEntitiesResponse <<< customize) { "Entities": Nothing }
 
 
 
@@ -488,7 +487,7 @@ newDetectKeyPhrasesRequest' _LanguageCode _Text customize = (DetectKeyPhrasesReq
 
 
 newtype DetectKeyPhrasesResponse = DetectKeyPhrasesResponse 
-  { "KeyPhrases" :: NullOrUndefined (ListOfKeyPhrases)
+  { "KeyPhrases" :: Maybe (ListOfKeyPhrases)
   }
 derive instance newtypeDetectKeyPhrasesResponse :: Newtype DetectKeyPhrasesResponse _
 derive instance repGenericDetectKeyPhrasesResponse :: Generic DetectKeyPhrasesResponse _
@@ -498,12 +497,12 @@ instance encodeDetectKeyPhrasesResponse :: Encode DetectKeyPhrasesResponse where
 
 -- | Constructs DetectKeyPhrasesResponse from required parameters
 newDetectKeyPhrasesResponse :: DetectKeyPhrasesResponse
-newDetectKeyPhrasesResponse  = DetectKeyPhrasesResponse { "KeyPhrases": (NullOrUndefined Nothing) }
+newDetectKeyPhrasesResponse  = DetectKeyPhrasesResponse { "KeyPhrases": Nothing }
 
 -- | Constructs DetectKeyPhrasesResponse's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newDetectKeyPhrasesResponse' :: ( { "KeyPhrases" :: NullOrUndefined (ListOfKeyPhrases) } -> {"KeyPhrases" :: NullOrUndefined (ListOfKeyPhrases) } ) -> DetectKeyPhrasesResponse
-newDetectKeyPhrasesResponse'  customize = (DetectKeyPhrasesResponse <<< customize) { "KeyPhrases": (NullOrUndefined Nothing) }
+newDetectKeyPhrasesResponse' :: ( { "KeyPhrases" :: Maybe (ListOfKeyPhrases) } -> {"KeyPhrases" :: Maybe (ListOfKeyPhrases) } ) -> DetectKeyPhrasesResponse
+newDetectKeyPhrasesResponse'  customize = (DetectKeyPhrasesResponse <<< customize) { "KeyPhrases": Nothing }
 
 
 
@@ -529,8 +528,8 @@ newDetectSentimentRequest' _LanguageCode _Text customize = (DetectSentimentReque
 
 
 newtype DetectSentimentResponse = DetectSentimentResponse 
-  { "Sentiment" :: NullOrUndefined (SentimentType)
-  , "SentimentScore" :: NullOrUndefined (SentimentScore)
+  { "Sentiment" :: Maybe (SentimentType)
+  , "SentimentScore" :: Maybe (SentimentScore)
   }
 derive instance newtypeDetectSentimentResponse :: Newtype DetectSentimentResponse _
 derive instance repGenericDetectSentimentResponse :: Generic DetectSentimentResponse _
@@ -540,19 +539,19 @@ instance encodeDetectSentimentResponse :: Encode DetectSentimentResponse where e
 
 -- | Constructs DetectSentimentResponse from required parameters
 newDetectSentimentResponse :: DetectSentimentResponse
-newDetectSentimentResponse  = DetectSentimentResponse { "Sentiment": (NullOrUndefined Nothing), "SentimentScore": (NullOrUndefined Nothing) }
+newDetectSentimentResponse  = DetectSentimentResponse { "Sentiment": Nothing, "SentimentScore": Nothing }
 
 -- | Constructs DetectSentimentResponse's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newDetectSentimentResponse' :: ( { "Sentiment" :: NullOrUndefined (SentimentType) , "SentimentScore" :: NullOrUndefined (SentimentScore) } -> {"Sentiment" :: NullOrUndefined (SentimentType) , "SentimentScore" :: NullOrUndefined (SentimentScore) } ) -> DetectSentimentResponse
-newDetectSentimentResponse'  customize = (DetectSentimentResponse <<< customize) { "Sentiment": (NullOrUndefined Nothing), "SentimentScore": (NullOrUndefined Nothing) }
+newDetectSentimentResponse' :: ( { "Sentiment" :: Maybe (SentimentType) , "SentimentScore" :: Maybe (SentimentScore) } -> {"Sentiment" :: Maybe (SentimentType) , "SentimentScore" :: Maybe (SentimentScore) } ) -> DetectSentimentResponse
+newDetectSentimentResponse'  customize = (DetectSentimentResponse <<< customize) { "Sentiment": Nothing, "SentimentScore": Nothing }
 
 
 
 -- | <p>Returns the code for the dominant language in the input text and the level of confidence that Amazon Comprehend has in the accuracy of the detection.</p>
 newtype DominantLanguage = DominantLanguage 
-  { "LanguageCode" :: NullOrUndefined (String)
-  , "Score" :: NullOrUndefined (Number)
+  { "LanguageCode" :: Maybe (String)
+  , "Score" :: Maybe (Number)
   }
 derive instance newtypeDominantLanguage :: Newtype DominantLanguage _
 derive instance repGenericDominantLanguage :: Generic DominantLanguage _
@@ -562,22 +561,22 @@ instance encodeDominantLanguage :: Encode DominantLanguage where encode = generi
 
 -- | Constructs DominantLanguage from required parameters
 newDominantLanguage :: DominantLanguage
-newDominantLanguage  = DominantLanguage { "LanguageCode": (NullOrUndefined Nothing), "Score": (NullOrUndefined Nothing) }
+newDominantLanguage  = DominantLanguage { "LanguageCode": Nothing, "Score": Nothing }
 
 -- | Constructs DominantLanguage's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newDominantLanguage' :: ( { "LanguageCode" :: NullOrUndefined (String) , "Score" :: NullOrUndefined (Number) } -> {"LanguageCode" :: NullOrUndefined (String) , "Score" :: NullOrUndefined (Number) } ) -> DominantLanguage
-newDominantLanguage'  customize = (DominantLanguage <<< customize) { "LanguageCode": (NullOrUndefined Nothing), "Score": (NullOrUndefined Nothing) }
+newDominantLanguage' :: ( { "LanguageCode" :: Maybe (String) , "Score" :: Maybe (Number) } -> {"LanguageCode" :: Maybe (String) , "Score" :: Maybe (Number) } ) -> DominantLanguage
+newDominantLanguage'  customize = (DominantLanguage <<< customize) { "LanguageCode": Nothing, "Score": Nothing }
 
 
 
 -- | <p>Provides information about an entity. </p> <p> </p>
 newtype Entity = Entity 
-  { "Score" :: NullOrUndefined (Number)
-  , "Type" :: NullOrUndefined (EntityType)
-  , "Text" :: NullOrUndefined (String)
-  , "BeginOffset" :: NullOrUndefined (Int)
-  , "EndOffset" :: NullOrUndefined (Int)
+  { "Score" :: Maybe (Number)
+  , "Type" :: Maybe (EntityType)
+  , "Text" :: Maybe (String)
+  , "BeginOffset" :: Maybe (Int)
+  , "EndOffset" :: Maybe (Int)
   }
 derive instance newtypeEntity :: Newtype Entity _
 derive instance repGenericEntity :: Generic Entity _
@@ -587,12 +586,12 @@ instance encodeEntity :: Encode Entity where encode = genericEncode options
 
 -- | Constructs Entity from required parameters
 newEntity :: Entity
-newEntity  = Entity { "BeginOffset": (NullOrUndefined Nothing), "EndOffset": (NullOrUndefined Nothing), "Score": (NullOrUndefined Nothing), "Text": (NullOrUndefined Nothing), "Type": (NullOrUndefined Nothing) }
+newEntity  = Entity { "BeginOffset": Nothing, "EndOffset": Nothing, "Score": Nothing, "Text": Nothing, "Type": Nothing }
 
 -- | Constructs Entity's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newEntity' :: ( { "Score" :: NullOrUndefined (Number) , "Type" :: NullOrUndefined (EntityType) , "Text" :: NullOrUndefined (String) , "BeginOffset" :: NullOrUndefined (Int) , "EndOffset" :: NullOrUndefined (Int) } -> {"Score" :: NullOrUndefined (Number) , "Type" :: NullOrUndefined (EntityType) , "Text" :: NullOrUndefined (String) , "BeginOffset" :: NullOrUndefined (Int) , "EndOffset" :: NullOrUndefined (Int) } ) -> Entity
-newEntity'  customize = (Entity <<< customize) { "BeginOffset": (NullOrUndefined Nothing), "EndOffset": (NullOrUndefined Nothing), "Score": (NullOrUndefined Nothing), "Text": (NullOrUndefined Nothing), "Type": (NullOrUndefined Nothing) }
+newEntity' :: ( { "Score" :: Maybe (Number) , "Type" :: Maybe (EntityType) , "Text" :: Maybe (String) , "BeginOffset" :: Maybe (Int) , "EndOffset" :: Maybe (Int) } -> {"Score" :: Maybe (Number) , "Type" :: Maybe (EntityType) , "Text" :: Maybe (String) , "BeginOffset" :: Maybe (Int) , "EndOffset" :: Maybe (Int) } ) -> Entity
+newEntity'  customize = (Entity <<< customize) { "BeginOffset": Nothing, "EndOffset": Nothing, "Score": Nothing, "Text": Nothing, "Type": Nothing }
 
 
 
@@ -617,7 +616,7 @@ instance encodeIamRoleArn :: Encode IamRoleArn where encode = genericEncode opti
 -- | <p>The input properties for a topic detection job.</p>
 newtype InputDataConfig = InputDataConfig 
   { "S3Uri" :: (S3Uri)
-  , "InputFormat" :: NullOrUndefined (InputFormat)
+  , "InputFormat" :: Maybe (InputFormat)
   }
 derive instance newtypeInputDataConfig :: Newtype InputDataConfig _
 derive instance repGenericInputDataConfig :: Generic InputDataConfig _
@@ -627,12 +626,12 @@ instance encodeInputDataConfig :: Encode InputDataConfig where encode = genericE
 
 -- | Constructs InputDataConfig from required parameters
 newInputDataConfig :: S3Uri -> InputDataConfig
-newInputDataConfig _S3Uri = InputDataConfig { "S3Uri": _S3Uri, "InputFormat": (NullOrUndefined Nothing) }
+newInputDataConfig _S3Uri = InputDataConfig { "S3Uri": _S3Uri, "InputFormat": Nothing }
 
 -- | Constructs InputDataConfig's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newInputDataConfig' :: S3Uri -> ( { "S3Uri" :: (S3Uri) , "InputFormat" :: NullOrUndefined (InputFormat) } -> {"S3Uri" :: (S3Uri) , "InputFormat" :: NullOrUndefined (InputFormat) } ) -> InputDataConfig
-newInputDataConfig' _S3Uri customize = (InputDataConfig <<< customize) { "S3Uri": _S3Uri, "InputFormat": (NullOrUndefined Nothing) }
+newInputDataConfig' :: S3Uri -> ( { "S3Uri" :: (S3Uri) , "InputFormat" :: Maybe (InputFormat) } -> {"S3Uri" :: (S3Uri) , "InputFormat" :: Maybe (InputFormat) } ) -> InputDataConfig
+newInputDataConfig' _S3Uri customize = (InputDataConfig <<< customize) { "S3Uri": _S3Uri, "InputFormat": Nothing }
 
 
 
@@ -647,7 +646,7 @@ instance encodeInputFormat :: Encode InputFormat where encode = genericEncode op
 
 -- | <p>An internal server error occurred. Retry your request.</p>
 newtype InternalServerException = InternalServerException 
-  { "Message" :: NullOrUndefined (String)
+  { "Message" :: Maybe (String)
   }
 derive instance newtypeInternalServerException :: Newtype InternalServerException _
 derive instance repGenericInternalServerException :: Generic InternalServerException _
@@ -657,18 +656,18 @@ instance encodeInternalServerException :: Encode InternalServerException where e
 
 -- | Constructs InternalServerException from required parameters
 newInternalServerException :: InternalServerException
-newInternalServerException  = InternalServerException { "Message": (NullOrUndefined Nothing) }
+newInternalServerException  = InternalServerException { "Message": Nothing }
 
 -- | Constructs InternalServerException's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newInternalServerException' :: ( { "Message" :: NullOrUndefined (String) } -> {"Message" :: NullOrUndefined (String) } ) -> InternalServerException
-newInternalServerException'  customize = (InternalServerException <<< customize) { "Message": (NullOrUndefined Nothing) }
+newInternalServerException' :: ( { "Message" :: Maybe (String) } -> {"Message" :: Maybe (String) } ) -> InternalServerException
+newInternalServerException'  customize = (InternalServerException <<< customize) { "Message": Nothing }
 
 
 
 -- | <p>The filter specified for the <code>ListTopicDetectionJobs</code> operation is invalid. Specify a different filter.</p>
 newtype InvalidFilterException = InvalidFilterException 
-  { "Message" :: NullOrUndefined (String)
+  { "Message" :: Maybe (String)
   }
 derive instance newtypeInvalidFilterException :: Newtype InvalidFilterException _
 derive instance repGenericInvalidFilterException :: Generic InvalidFilterException _
@@ -678,18 +677,18 @@ instance encodeInvalidFilterException :: Encode InvalidFilterException where enc
 
 -- | Constructs InvalidFilterException from required parameters
 newInvalidFilterException :: InvalidFilterException
-newInvalidFilterException  = InvalidFilterException { "Message": (NullOrUndefined Nothing) }
+newInvalidFilterException  = InvalidFilterException { "Message": Nothing }
 
 -- | Constructs InvalidFilterException's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newInvalidFilterException' :: ( { "Message" :: NullOrUndefined (String) } -> {"Message" :: NullOrUndefined (String) } ) -> InvalidFilterException
-newInvalidFilterException'  customize = (InvalidFilterException <<< customize) { "Message": (NullOrUndefined Nothing) }
+newInvalidFilterException' :: ( { "Message" :: Maybe (String) } -> {"Message" :: Maybe (String) } ) -> InvalidFilterException
+newInvalidFilterException'  customize = (InvalidFilterException <<< customize) { "Message": Nothing }
 
 
 
 -- | <p>The request is invalid.</p>
 newtype InvalidRequestException = InvalidRequestException 
-  { "Message" :: NullOrUndefined (String)
+  { "Message" :: Maybe (String)
   }
 derive instance newtypeInvalidRequestException :: Newtype InvalidRequestException _
 derive instance repGenericInvalidRequestException :: Generic InvalidRequestException _
@@ -699,12 +698,12 @@ instance encodeInvalidRequestException :: Encode InvalidRequestException where e
 
 -- | Constructs InvalidRequestException from required parameters
 newInvalidRequestException :: InvalidRequestException
-newInvalidRequestException  = InvalidRequestException { "Message": (NullOrUndefined Nothing) }
+newInvalidRequestException  = InvalidRequestException { "Message": Nothing }
 
 -- | Constructs InvalidRequestException's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newInvalidRequestException' :: ( { "Message" :: NullOrUndefined (String) } -> {"Message" :: NullOrUndefined (String) } ) -> InvalidRequestException
-newInvalidRequestException'  customize = (InvalidRequestException <<< customize) { "Message": (NullOrUndefined Nothing) }
+newInvalidRequestException' :: ( { "Message" :: Maybe (String) } -> {"Message" :: Maybe (String) } ) -> InvalidRequestException
+newInvalidRequestException'  customize = (InvalidRequestException <<< customize) { "Message": Nothing }
 
 
 
@@ -728,7 +727,7 @@ instance encodeJobName :: Encode JobName where encode = genericEncode options
 
 -- | <p>The specified job was not found. Check the job ID and try again.</p>
 newtype JobNotFoundException = JobNotFoundException 
-  { "Message" :: NullOrUndefined (String)
+  { "Message" :: Maybe (String)
   }
 derive instance newtypeJobNotFoundException :: Newtype JobNotFoundException _
 derive instance repGenericJobNotFoundException :: Generic JobNotFoundException _
@@ -738,12 +737,12 @@ instance encodeJobNotFoundException :: Encode JobNotFoundException where encode 
 
 -- | Constructs JobNotFoundException from required parameters
 newJobNotFoundException :: JobNotFoundException
-newJobNotFoundException  = JobNotFoundException { "Message": (NullOrUndefined Nothing) }
+newJobNotFoundException  = JobNotFoundException { "Message": Nothing }
 
 -- | Constructs JobNotFoundException's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newJobNotFoundException' :: ( { "Message" :: NullOrUndefined (String) } -> {"Message" :: NullOrUndefined (String) } ) -> JobNotFoundException
-newJobNotFoundException'  customize = (JobNotFoundException <<< customize) { "Message": (NullOrUndefined Nothing) }
+newJobNotFoundException' :: ( { "Message" :: Maybe (String) } -> {"Message" :: Maybe (String) } ) -> JobNotFoundException
+newJobNotFoundException'  customize = (JobNotFoundException <<< customize) { "Message": Nothing }
 
 
 
@@ -758,10 +757,10 @@ instance encodeJobStatus :: Encode JobStatus where encode = genericEncode option
 
 -- | <p>Describes a key noun phrase.</p>
 newtype KeyPhrase = KeyPhrase 
-  { "Score" :: NullOrUndefined (Number)
-  , "Text" :: NullOrUndefined (String)
-  , "BeginOffset" :: NullOrUndefined (Int)
-  , "EndOffset" :: NullOrUndefined (Int)
+  { "Score" :: Maybe (Number)
+  , "Text" :: Maybe (String)
+  , "BeginOffset" :: Maybe (Int)
+  , "EndOffset" :: Maybe (Int)
   }
 derive instance newtypeKeyPhrase :: Newtype KeyPhrase _
 derive instance repGenericKeyPhrase :: Generic KeyPhrase _
@@ -771,12 +770,12 @@ instance encodeKeyPhrase :: Encode KeyPhrase where encode = genericEncode option
 
 -- | Constructs KeyPhrase from required parameters
 newKeyPhrase :: KeyPhrase
-newKeyPhrase  = KeyPhrase { "BeginOffset": (NullOrUndefined Nothing), "EndOffset": (NullOrUndefined Nothing), "Score": (NullOrUndefined Nothing), "Text": (NullOrUndefined Nothing) }
+newKeyPhrase  = KeyPhrase { "BeginOffset": Nothing, "EndOffset": Nothing, "Score": Nothing, "Text": Nothing }
 
 -- | Constructs KeyPhrase's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newKeyPhrase' :: ( { "Score" :: NullOrUndefined (Number) , "Text" :: NullOrUndefined (String) , "BeginOffset" :: NullOrUndefined (Int) , "EndOffset" :: NullOrUndefined (Int) } -> {"Score" :: NullOrUndefined (Number) , "Text" :: NullOrUndefined (String) , "BeginOffset" :: NullOrUndefined (Int) , "EndOffset" :: NullOrUndefined (Int) } ) -> KeyPhrase
-newKeyPhrase'  customize = (KeyPhrase <<< customize) { "BeginOffset": (NullOrUndefined Nothing), "EndOffset": (NullOrUndefined Nothing), "Score": (NullOrUndefined Nothing), "Text": (NullOrUndefined Nothing) }
+newKeyPhrase' :: ( { "Score" :: Maybe (Number) , "Text" :: Maybe (String) , "BeginOffset" :: Maybe (Int) , "EndOffset" :: Maybe (Int) } -> {"Score" :: Maybe (Number) , "Text" :: Maybe (String) , "BeginOffset" :: Maybe (Int) , "EndOffset" :: Maybe (Int) } ) -> KeyPhrase
+newKeyPhrase'  customize = (KeyPhrase <<< customize) { "BeginOffset": Nothing, "EndOffset": Nothing, "Score": Nothing, "Text": Nothing }
 
 
 
@@ -853,9 +852,9 @@ instance encodeListOfKeyPhrases :: Encode ListOfKeyPhrases where encode = generi
 
 
 newtype ListTopicsDetectionJobsRequest = ListTopicsDetectionJobsRequest 
-  { "Filter" :: NullOrUndefined (TopicsDetectionJobFilter)
-  , "NextToken" :: NullOrUndefined (String)
-  , "MaxResults" :: NullOrUndefined (MaxResultsInteger)
+  { "Filter" :: Maybe (TopicsDetectionJobFilter)
+  , "NextToken" :: Maybe (String)
+  , "MaxResults" :: Maybe (MaxResultsInteger)
   }
 derive instance newtypeListTopicsDetectionJobsRequest :: Newtype ListTopicsDetectionJobsRequest _
 derive instance repGenericListTopicsDetectionJobsRequest :: Generic ListTopicsDetectionJobsRequest _
@@ -865,18 +864,18 @@ instance encodeListTopicsDetectionJobsRequest :: Encode ListTopicsDetectionJobsR
 
 -- | Constructs ListTopicsDetectionJobsRequest from required parameters
 newListTopicsDetectionJobsRequest :: ListTopicsDetectionJobsRequest
-newListTopicsDetectionJobsRequest  = ListTopicsDetectionJobsRequest { "Filter": (NullOrUndefined Nothing), "MaxResults": (NullOrUndefined Nothing), "NextToken": (NullOrUndefined Nothing) }
+newListTopicsDetectionJobsRequest  = ListTopicsDetectionJobsRequest { "Filter": Nothing, "MaxResults": Nothing, "NextToken": Nothing }
 
 -- | Constructs ListTopicsDetectionJobsRequest's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newListTopicsDetectionJobsRequest' :: ( { "Filter" :: NullOrUndefined (TopicsDetectionJobFilter) , "NextToken" :: NullOrUndefined (String) , "MaxResults" :: NullOrUndefined (MaxResultsInteger) } -> {"Filter" :: NullOrUndefined (TopicsDetectionJobFilter) , "NextToken" :: NullOrUndefined (String) , "MaxResults" :: NullOrUndefined (MaxResultsInteger) } ) -> ListTopicsDetectionJobsRequest
-newListTopicsDetectionJobsRequest'  customize = (ListTopicsDetectionJobsRequest <<< customize) { "Filter": (NullOrUndefined Nothing), "MaxResults": (NullOrUndefined Nothing), "NextToken": (NullOrUndefined Nothing) }
+newListTopicsDetectionJobsRequest' :: ( { "Filter" :: Maybe (TopicsDetectionJobFilter) , "NextToken" :: Maybe (String) , "MaxResults" :: Maybe (MaxResultsInteger) } -> {"Filter" :: Maybe (TopicsDetectionJobFilter) , "NextToken" :: Maybe (String) , "MaxResults" :: Maybe (MaxResultsInteger) } ) -> ListTopicsDetectionJobsRequest
+newListTopicsDetectionJobsRequest'  customize = (ListTopicsDetectionJobsRequest <<< customize) { "Filter": Nothing, "MaxResults": Nothing, "NextToken": Nothing }
 
 
 
 newtype ListTopicsDetectionJobsResponse = ListTopicsDetectionJobsResponse 
-  { "TopicsDetectionJobPropertiesList" :: NullOrUndefined (TopicsDetectionJobPropertiesList)
-  , "NextToken" :: NullOrUndefined (String)
+  { "TopicsDetectionJobPropertiesList" :: Maybe (TopicsDetectionJobPropertiesList)
+  , "NextToken" :: Maybe (String)
   }
 derive instance newtypeListTopicsDetectionJobsResponse :: Newtype ListTopicsDetectionJobsResponse _
 derive instance repGenericListTopicsDetectionJobsResponse :: Generic ListTopicsDetectionJobsResponse _
@@ -886,12 +885,12 @@ instance encodeListTopicsDetectionJobsResponse :: Encode ListTopicsDetectionJobs
 
 -- | Constructs ListTopicsDetectionJobsResponse from required parameters
 newListTopicsDetectionJobsResponse :: ListTopicsDetectionJobsResponse
-newListTopicsDetectionJobsResponse  = ListTopicsDetectionJobsResponse { "NextToken": (NullOrUndefined Nothing), "TopicsDetectionJobPropertiesList": (NullOrUndefined Nothing) }
+newListTopicsDetectionJobsResponse  = ListTopicsDetectionJobsResponse { "NextToken": Nothing, "TopicsDetectionJobPropertiesList": Nothing }
 
 -- | Constructs ListTopicsDetectionJobsResponse's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newListTopicsDetectionJobsResponse' :: ( { "TopicsDetectionJobPropertiesList" :: NullOrUndefined (TopicsDetectionJobPropertiesList) , "NextToken" :: NullOrUndefined (String) } -> {"TopicsDetectionJobPropertiesList" :: NullOrUndefined (TopicsDetectionJobPropertiesList) , "NextToken" :: NullOrUndefined (String) } ) -> ListTopicsDetectionJobsResponse
-newListTopicsDetectionJobsResponse'  customize = (ListTopicsDetectionJobsResponse <<< customize) { "NextToken": (NullOrUndefined Nothing), "TopicsDetectionJobPropertiesList": (NullOrUndefined Nothing) }
+newListTopicsDetectionJobsResponse' :: ( { "TopicsDetectionJobPropertiesList" :: Maybe (TopicsDetectionJobPropertiesList) , "NextToken" :: Maybe (String) } -> {"TopicsDetectionJobPropertiesList" :: Maybe (TopicsDetectionJobPropertiesList) , "NextToken" :: Maybe (String) } ) -> ListTopicsDetectionJobsResponse
+newListTopicsDetectionJobsResponse'  customize = (ListTopicsDetectionJobsResponse <<< customize) { "NextToken": Nothing, "TopicsDetectionJobPropertiesList": Nothing }
 
 
 
@@ -945,10 +944,10 @@ instance encodeS3Uri :: Encode S3Uri where encode = genericEncode options
 
 -- | <p>Describes the level of confidence that Amazon Comprehend has in the accuracy of its detection of sentiments.</p>
 newtype SentimentScore = SentimentScore 
-  { "Positive" :: NullOrUndefined (Number)
-  , "Negative" :: NullOrUndefined (Number)
-  , "Neutral" :: NullOrUndefined (Number)
-  , "Mixed" :: NullOrUndefined (Number)
+  { "Positive" :: Maybe (Number)
+  , "Negative" :: Maybe (Number)
+  , "Neutral" :: Maybe (Number)
+  , "Mixed" :: Maybe (Number)
   }
 derive instance newtypeSentimentScore :: Newtype SentimentScore _
 derive instance repGenericSentimentScore :: Generic SentimentScore _
@@ -958,12 +957,12 @@ instance encodeSentimentScore :: Encode SentimentScore where encode = genericEnc
 
 -- | Constructs SentimentScore from required parameters
 newSentimentScore :: SentimentScore
-newSentimentScore  = SentimentScore { "Mixed": (NullOrUndefined Nothing), "Negative": (NullOrUndefined Nothing), "Neutral": (NullOrUndefined Nothing), "Positive": (NullOrUndefined Nothing) }
+newSentimentScore  = SentimentScore { "Mixed": Nothing, "Negative": Nothing, "Neutral": Nothing, "Positive": Nothing }
 
 -- | Constructs SentimentScore's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newSentimentScore' :: ( { "Positive" :: NullOrUndefined (Number) , "Negative" :: NullOrUndefined (Number) , "Neutral" :: NullOrUndefined (Number) , "Mixed" :: NullOrUndefined (Number) } -> {"Positive" :: NullOrUndefined (Number) , "Negative" :: NullOrUndefined (Number) , "Neutral" :: NullOrUndefined (Number) , "Mixed" :: NullOrUndefined (Number) } ) -> SentimentScore
-newSentimentScore'  customize = (SentimentScore <<< customize) { "Mixed": (NullOrUndefined Nothing), "Negative": (NullOrUndefined Nothing), "Neutral": (NullOrUndefined Nothing), "Positive": (NullOrUndefined Nothing) }
+newSentimentScore' :: ( { "Positive" :: Maybe (Number) , "Negative" :: Maybe (Number) , "Neutral" :: Maybe (Number) , "Mixed" :: Maybe (Number) } -> {"Positive" :: Maybe (Number) , "Negative" :: Maybe (Number) , "Neutral" :: Maybe (Number) , "Mixed" :: Maybe (Number) } ) -> SentimentScore
+newSentimentScore'  customize = (SentimentScore <<< customize) { "Mixed": Nothing, "Negative": Nothing, "Neutral": Nothing, "Positive": Nothing }
 
 
 
@@ -980,9 +979,9 @@ newtype StartTopicsDetectionJobRequest = StartTopicsDetectionJobRequest
   { "InputDataConfig" :: (InputDataConfig)
   , "OutputDataConfig" :: (OutputDataConfig)
   , "DataAccessRoleArn" :: (IamRoleArn)
-  , "JobName" :: NullOrUndefined (JobName)
-  , "NumberOfTopics" :: NullOrUndefined (NumberOfTopicsInteger)
-  , "ClientRequestToken" :: NullOrUndefined (ClientRequestTokenString)
+  , "JobName" :: Maybe (JobName)
+  , "NumberOfTopics" :: Maybe (NumberOfTopicsInteger)
+  , "ClientRequestToken" :: Maybe (ClientRequestTokenString)
   }
 derive instance newtypeStartTopicsDetectionJobRequest :: Newtype StartTopicsDetectionJobRequest _
 derive instance repGenericStartTopicsDetectionJobRequest :: Generic StartTopicsDetectionJobRequest _
@@ -992,18 +991,18 @@ instance encodeStartTopicsDetectionJobRequest :: Encode StartTopicsDetectionJobR
 
 -- | Constructs StartTopicsDetectionJobRequest from required parameters
 newStartTopicsDetectionJobRequest :: IamRoleArn -> InputDataConfig -> OutputDataConfig -> StartTopicsDetectionJobRequest
-newStartTopicsDetectionJobRequest _DataAccessRoleArn _InputDataConfig _OutputDataConfig = StartTopicsDetectionJobRequest { "DataAccessRoleArn": _DataAccessRoleArn, "InputDataConfig": _InputDataConfig, "OutputDataConfig": _OutputDataConfig, "ClientRequestToken": (NullOrUndefined Nothing), "JobName": (NullOrUndefined Nothing), "NumberOfTopics": (NullOrUndefined Nothing) }
+newStartTopicsDetectionJobRequest _DataAccessRoleArn _InputDataConfig _OutputDataConfig = StartTopicsDetectionJobRequest { "DataAccessRoleArn": _DataAccessRoleArn, "InputDataConfig": _InputDataConfig, "OutputDataConfig": _OutputDataConfig, "ClientRequestToken": Nothing, "JobName": Nothing, "NumberOfTopics": Nothing }
 
 -- | Constructs StartTopicsDetectionJobRequest's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newStartTopicsDetectionJobRequest' :: IamRoleArn -> InputDataConfig -> OutputDataConfig -> ( { "InputDataConfig" :: (InputDataConfig) , "OutputDataConfig" :: (OutputDataConfig) , "DataAccessRoleArn" :: (IamRoleArn) , "JobName" :: NullOrUndefined (JobName) , "NumberOfTopics" :: NullOrUndefined (NumberOfTopicsInteger) , "ClientRequestToken" :: NullOrUndefined (ClientRequestTokenString) } -> {"InputDataConfig" :: (InputDataConfig) , "OutputDataConfig" :: (OutputDataConfig) , "DataAccessRoleArn" :: (IamRoleArn) , "JobName" :: NullOrUndefined (JobName) , "NumberOfTopics" :: NullOrUndefined (NumberOfTopicsInteger) , "ClientRequestToken" :: NullOrUndefined (ClientRequestTokenString) } ) -> StartTopicsDetectionJobRequest
-newStartTopicsDetectionJobRequest' _DataAccessRoleArn _InputDataConfig _OutputDataConfig customize = (StartTopicsDetectionJobRequest <<< customize) { "DataAccessRoleArn": _DataAccessRoleArn, "InputDataConfig": _InputDataConfig, "OutputDataConfig": _OutputDataConfig, "ClientRequestToken": (NullOrUndefined Nothing), "JobName": (NullOrUndefined Nothing), "NumberOfTopics": (NullOrUndefined Nothing) }
+newStartTopicsDetectionJobRequest' :: IamRoleArn -> InputDataConfig -> OutputDataConfig -> ( { "InputDataConfig" :: (InputDataConfig) , "OutputDataConfig" :: (OutputDataConfig) , "DataAccessRoleArn" :: (IamRoleArn) , "JobName" :: Maybe (JobName) , "NumberOfTopics" :: Maybe (NumberOfTopicsInteger) , "ClientRequestToken" :: Maybe (ClientRequestTokenString) } -> {"InputDataConfig" :: (InputDataConfig) , "OutputDataConfig" :: (OutputDataConfig) , "DataAccessRoleArn" :: (IamRoleArn) , "JobName" :: Maybe (JobName) , "NumberOfTopics" :: Maybe (NumberOfTopicsInteger) , "ClientRequestToken" :: Maybe (ClientRequestTokenString) } ) -> StartTopicsDetectionJobRequest
+newStartTopicsDetectionJobRequest' _DataAccessRoleArn _InputDataConfig _OutputDataConfig customize = (StartTopicsDetectionJobRequest <<< customize) { "DataAccessRoleArn": _DataAccessRoleArn, "InputDataConfig": _InputDataConfig, "OutputDataConfig": _OutputDataConfig, "ClientRequestToken": Nothing, "JobName": Nothing, "NumberOfTopics": Nothing }
 
 
 
 newtype StartTopicsDetectionJobResponse = StartTopicsDetectionJobResponse 
-  { "JobId" :: NullOrUndefined (JobId)
-  , "JobStatus" :: NullOrUndefined (JobStatus)
+  { "JobId" :: Maybe (JobId)
+  , "JobStatus" :: Maybe (JobStatus)
   }
 derive instance newtypeStartTopicsDetectionJobResponse :: Newtype StartTopicsDetectionJobResponse _
 derive instance repGenericStartTopicsDetectionJobResponse :: Generic StartTopicsDetectionJobResponse _
@@ -1013,12 +1012,12 @@ instance encodeStartTopicsDetectionJobResponse :: Encode StartTopicsDetectionJob
 
 -- | Constructs StartTopicsDetectionJobResponse from required parameters
 newStartTopicsDetectionJobResponse :: StartTopicsDetectionJobResponse
-newStartTopicsDetectionJobResponse  = StartTopicsDetectionJobResponse { "JobId": (NullOrUndefined Nothing), "JobStatus": (NullOrUndefined Nothing) }
+newStartTopicsDetectionJobResponse  = StartTopicsDetectionJobResponse { "JobId": Nothing, "JobStatus": Nothing }
 
 -- | Constructs StartTopicsDetectionJobResponse's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newStartTopicsDetectionJobResponse' :: ( { "JobId" :: NullOrUndefined (JobId) , "JobStatus" :: NullOrUndefined (JobStatus) } -> {"JobId" :: NullOrUndefined (JobId) , "JobStatus" :: NullOrUndefined (JobStatus) } ) -> StartTopicsDetectionJobResponse
-newStartTopicsDetectionJobResponse'  customize = (StartTopicsDetectionJobResponse <<< customize) { "JobId": (NullOrUndefined Nothing), "JobStatus": (NullOrUndefined Nothing) }
+newStartTopicsDetectionJobResponse' :: ( { "JobId" :: Maybe (JobId) , "JobStatus" :: Maybe (JobStatus) } -> {"JobId" :: Maybe (JobId) , "JobStatus" :: Maybe (JobStatus) } ) -> StartTopicsDetectionJobResponse
+newStartTopicsDetectionJobResponse'  customize = (StartTopicsDetectionJobResponse <<< customize) { "JobId": Nothing, "JobStatus": Nothing }
 
 
 
@@ -1033,7 +1032,7 @@ instance encodeStringList :: Encode StringList where encode = genericEncode opti
 
 -- | <p>The size of the input text exceeds the limit. Use a smaller document.</p>
 newtype TextSizeLimitExceededException = TextSizeLimitExceededException 
-  { "Message" :: NullOrUndefined (String)
+  { "Message" :: Maybe (String)
   }
 derive instance newtypeTextSizeLimitExceededException :: Newtype TextSizeLimitExceededException _
 derive instance repGenericTextSizeLimitExceededException :: Generic TextSizeLimitExceededException _
@@ -1043,18 +1042,18 @@ instance encodeTextSizeLimitExceededException :: Encode TextSizeLimitExceededExc
 
 -- | Constructs TextSizeLimitExceededException from required parameters
 newTextSizeLimitExceededException :: TextSizeLimitExceededException
-newTextSizeLimitExceededException  = TextSizeLimitExceededException { "Message": (NullOrUndefined Nothing) }
+newTextSizeLimitExceededException  = TextSizeLimitExceededException { "Message": Nothing }
 
 -- | Constructs TextSizeLimitExceededException's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newTextSizeLimitExceededException' :: ( { "Message" :: NullOrUndefined (String) } -> {"Message" :: NullOrUndefined (String) } ) -> TextSizeLimitExceededException
-newTextSizeLimitExceededException'  customize = (TextSizeLimitExceededException <<< customize) { "Message": (NullOrUndefined Nothing) }
+newTextSizeLimitExceededException' :: ( { "Message" :: Maybe (String) } -> {"Message" :: Maybe (String) } ) -> TextSizeLimitExceededException
+newTextSizeLimitExceededException'  customize = (TextSizeLimitExceededException <<< customize) { "Message": Nothing }
 
 
 
 -- | <p>The number of requests exceeds the limit. Resubmit your request later.</p>
 newtype TooManyRequestsException = TooManyRequestsException 
-  { "Message" :: NullOrUndefined (String)
+  { "Message" :: Maybe (String)
   }
 derive instance newtypeTooManyRequestsException :: Newtype TooManyRequestsException _
 derive instance repGenericTooManyRequestsException :: Generic TooManyRequestsException _
@@ -1064,21 +1063,21 @@ instance encodeTooManyRequestsException :: Encode TooManyRequestsException where
 
 -- | Constructs TooManyRequestsException from required parameters
 newTooManyRequestsException :: TooManyRequestsException
-newTooManyRequestsException  = TooManyRequestsException { "Message": (NullOrUndefined Nothing) }
+newTooManyRequestsException  = TooManyRequestsException { "Message": Nothing }
 
 -- | Constructs TooManyRequestsException's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newTooManyRequestsException' :: ( { "Message" :: NullOrUndefined (String) } -> {"Message" :: NullOrUndefined (String) } ) -> TooManyRequestsException
-newTooManyRequestsException'  customize = (TooManyRequestsException <<< customize) { "Message": (NullOrUndefined Nothing) }
+newTooManyRequestsException' :: ( { "Message" :: Maybe (String) } -> {"Message" :: Maybe (String) } ) -> TooManyRequestsException
+newTooManyRequestsException'  customize = (TooManyRequestsException <<< customize) { "Message": Nothing }
 
 
 
 -- | <p>Provides information for filtering topic detection jobs. For more information, see .</p>
 newtype TopicsDetectionJobFilter = TopicsDetectionJobFilter 
-  { "JobName" :: NullOrUndefined (JobName)
-  , "JobStatus" :: NullOrUndefined (JobStatus)
-  , "SubmitTimeBefore" :: NullOrUndefined (Types.Timestamp)
-  , "SubmitTimeAfter" :: NullOrUndefined (Types.Timestamp)
+  { "JobName" :: Maybe (JobName)
+  , "JobStatus" :: Maybe (JobStatus)
+  , "SubmitTimeBefore" :: Maybe (Types.Timestamp)
+  , "SubmitTimeAfter" :: Maybe (Types.Timestamp)
   }
 derive instance newtypeTopicsDetectionJobFilter :: Newtype TopicsDetectionJobFilter _
 derive instance repGenericTopicsDetectionJobFilter :: Generic TopicsDetectionJobFilter _
@@ -1088,26 +1087,26 @@ instance encodeTopicsDetectionJobFilter :: Encode TopicsDetectionJobFilter where
 
 -- | Constructs TopicsDetectionJobFilter from required parameters
 newTopicsDetectionJobFilter :: TopicsDetectionJobFilter
-newTopicsDetectionJobFilter  = TopicsDetectionJobFilter { "JobName": (NullOrUndefined Nothing), "JobStatus": (NullOrUndefined Nothing), "SubmitTimeAfter": (NullOrUndefined Nothing), "SubmitTimeBefore": (NullOrUndefined Nothing) }
+newTopicsDetectionJobFilter  = TopicsDetectionJobFilter { "JobName": Nothing, "JobStatus": Nothing, "SubmitTimeAfter": Nothing, "SubmitTimeBefore": Nothing }
 
 -- | Constructs TopicsDetectionJobFilter's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newTopicsDetectionJobFilter' :: ( { "JobName" :: NullOrUndefined (JobName) , "JobStatus" :: NullOrUndefined (JobStatus) , "SubmitTimeBefore" :: NullOrUndefined (Types.Timestamp) , "SubmitTimeAfter" :: NullOrUndefined (Types.Timestamp) } -> {"JobName" :: NullOrUndefined (JobName) , "JobStatus" :: NullOrUndefined (JobStatus) , "SubmitTimeBefore" :: NullOrUndefined (Types.Timestamp) , "SubmitTimeAfter" :: NullOrUndefined (Types.Timestamp) } ) -> TopicsDetectionJobFilter
-newTopicsDetectionJobFilter'  customize = (TopicsDetectionJobFilter <<< customize) { "JobName": (NullOrUndefined Nothing), "JobStatus": (NullOrUndefined Nothing), "SubmitTimeAfter": (NullOrUndefined Nothing), "SubmitTimeBefore": (NullOrUndefined Nothing) }
+newTopicsDetectionJobFilter' :: ( { "JobName" :: Maybe (JobName) , "JobStatus" :: Maybe (JobStatus) , "SubmitTimeBefore" :: Maybe (Types.Timestamp) , "SubmitTimeAfter" :: Maybe (Types.Timestamp) } -> {"JobName" :: Maybe (JobName) , "JobStatus" :: Maybe (JobStatus) , "SubmitTimeBefore" :: Maybe (Types.Timestamp) , "SubmitTimeAfter" :: Maybe (Types.Timestamp) } ) -> TopicsDetectionJobFilter
+newTopicsDetectionJobFilter'  customize = (TopicsDetectionJobFilter <<< customize) { "JobName": Nothing, "JobStatus": Nothing, "SubmitTimeAfter": Nothing, "SubmitTimeBefore": Nothing }
 
 
 
 -- | <p>Provides information about a topic detection job.</p>
 newtype TopicsDetectionJobProperties = TopicsDetectionJobProperties 
-  { "JobId" :: NullOrUndefined (JobId)
-  , "JobName" :: NullOrUndefined (JobName)
-  , "JobStatus" :: NullOrUndefined (JobStatus)
-  , "Message" :: NullOrUndefined (AnyLengthString)
-  , "SubmitTime" :: NullOrUndefined (Types.Timestamp)
-  , "EndTime" :: NullOrUndefined (Types.Timestamp)
-  , "InputDataConfig" :: NullOrUndefined (InputDataConfig)
-  , "OutputDataConfig" :: NullOrUndefined (OutputDataConfig)
-  , "NumberOfTopics" :: NullOrUndefined (Int)
+  { "JobId" :: Maybe (JobId)
+  , "JobName" :: Maybe (JobName)
+  , "JobStatus" :: Maybe (JobStatus)
+  , "Message" :: Maybe (AnyLengthString)
+  , "SubmitTime" :: Maybe (Types.Timestamp)
+  , "EndTime" :: Maybe (Types.Timestamp)
+  , "InputDataConfig" :: Maybe (InputDataConfig)
+  , "OutputDataConfig" :: Maybe (OutputDataConfig)
+  , "NumberOfTopics" :: Maybe (Int)
   }
 derive instance newtypeTopicsDetectionJobProperties :: Newtype TopicsDetectionJobProperties _
 derive instance repGenericTopicsDetectionJobProperties :: Generic TopicsDetectionJobProperties _
@@ -1117,12 +1116,12 @@ instance encodeTopicsDetectionJobProperties :: Encode TopicsDetectionJobProperti
 
 -- | Constructs TopicsDetectionJobProperties from required parameters
 newTopicsDetectionJobProperties :: TopicsDetectionJobProperties
-newTopicsDetectionJobProperties  = TopicsDetectionJobProperties { "EndTime": (NullOrUndefined Nothing), "InputDataConfig": (NullOrUndefined Nothing), "JobId": (NullOrUndefined Nothing), "JobName": (NullOrUndefined Nothing), "JobStatus": (NullOrUndefined Nothing), "Message": (NullOrUndefined Nothing), "NumberOfTopics": (NullOrUndefined Nothing), "OutputDataConfig": (NullOrUndefined Nothing), "SubmitTime": (NullOrUndefined Nothing) }
+newTopicsDetectionJobProperties  = TopicsDetectionJobProperties { "EndTime": Nothing, "InputDataConfig": Nothing, "JobId": Nothing, "JobName": Nothing, "JobStatus": Nothing, "Message": Nothing, "NumberOfTopics": Nothing, "OutputDataConfig": Nothing, "SubmitTime": Nothing }
 
 -- | Constructs TopicsDetectionJobProperties's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newTopicsDetectionJobProperties' :: ( { "JobId" :: NullOrUndefined (JobId) , "JobName" :: NullOrUndefined (JobName) , "JobStatus" :: NullOrUndefined (JobStatus) , "Message" :: NullOrUndefined (AnyLengthString) , "SubmitTime" :: NullOrUndefined (Types.Timestamp) , "EndTime" :: NullOrUndefined (Types.Timestamp) , "InputDataConfig" :: NullOrUndefined (InputDataConfig) , "OutputDataConfig" :: NullOrUndefined (OutputDataConfig) , "NumberOfTopics" :: NullOrUndefined (Int) } -> {"JobId" :: NullOrUndefined (JobId) , "JobName" :: NullOrUndefined (JobName) , "JobStatus" :: NullOrUndefined (JobStatus) , "Message" :: NullOrUndefined (AnyLengthString) , "SubmitTime" :: NullOrUndefined (Types.Timestamp) , "EndTime" :: NullOrUndefined (Types.Timestamp) , "InputDataConfig" :: NullOrUndefined (InputDataConfig) , "OutputDataConfig" :: NullOrUndefined (OutputDataConfig) , "NumberOfTopics" :: NullOrUndefined (Int) } ) -> TopicsDetectionJobProperties
-newTopicsDetectionJobProperties'  customize = (TopicsDetectionJobProperties <<< customize) { "EndTime": (NullOrUndefined Nothing), "InputDataConfig": (NullOrUndefined Nothing), "JobId": (NullOrUndefined Nothing), "JobName": (NullOrUndefined Nothing), "JobStatus": (NullOrUndefined Nothing), "Message": (NullOrUndefined Nothing), "NumberOfTopics": (NullOrUndefined Nothing), "OutputDataConfig": (NullOrUndefined Nothing), "SubmitTime": (NullOrUndefined Nothing) }
+newTopicsDetectionJobProperties' :: ( { "JobId" :: Maybe (JobId) , "JobName" :: Maybe (JobName) , "JobStatus" :: Maybe (JobStatus) , "Message" :: Maybe (AnyLengthString) , "SubmitTime" :: Maybe (Types.Timestamp) , "EndTime" :: Maybe (Types.Timestamp) , "InputDataConfig" :: Maybe (InputDataConfig) , "OutputDataConfig" :: Maybe (OutputDataConfig) , "NumberOfTopics" :: Maybe (Int) } -> {"JobId" :: Maybe (JobId) , "JobName" :: Maybe (JobName) , "JobStatus" :: Maybe (JobStatus) , "Message" :: Maybe (AnyLengthString) , "SubmitTime" :: Maybe (Types.Timestamp) , "EndTime" :: Maybe (Types.Timestamp) , "InputDataConfig" :: Maybe (InputDataConfig) , "OutputDataConfig" :: Maybe (OutputDataConfig) , "NumberOfTopics" :: Maybe (Int) } ) -> TopicsDetectionJobProperties
+newTopicsDetectionJobProperties'  customize = (TopicsDetectionJobProperties <<< customize) { "EndTime": Nothing, "InputDataConfig": Nothing, "JobId": Nothing, "JobName": Nothing, "JobStatus": Nothing, "Message": Nothing, "NumberOfTopics": Nothing, "OutputDataConfig": Nothing, "SubmitTime": Nothing }
 
 
 
@@ -1137,7 +1136,7 @@ instance encodeTopicsDetectionJobPropertiesList :: Encode TopicsDetectionJobProp
 
 -- | <p>Amazon Comprehend can't process the language of the input text. For all APIs except <code>DetectDominantLanguage</code>, Amazon Comprehend accepts only English or Spanish text. For the <code>DetectDominantLanguage</code> API, Amazon Comprehend detects 100 languages. For a list of languages, see <a>how-languages</a> </p>
 newtype UnsupportedLanguageException = UnsupportedLanguageException 
-  { "Message" :: NullOrUndefined (String)
+  { "Message" :: Maybe (String)
   }
 derive instance newtypeUnsupportedLanguageException :: Newtype UnsupportedLanguageException _
 derive instance repGenericUnsupportedLanguageException :: Generic UnsupportedLanguageException _
@@ -1147,10 +1146,10 @@ instance encodeUnsupportedLanguageException :: Encode UnsupportedLanguageExcepti
 
 -- | Constructs UnsupportedLanguageException from required parameters
 newUnsupportedLanguageException :: UnsupportedLanguageException
-newUnsupportedLanguageException  = UnsupportedLanguageException { "Message": (NullOrUndefined Nothing) }
+newUnsupportedLanguageException  = UnsupportedLanguageException { "Message": Nothing }
 
 -- | Constructs UnsupportedLanguageException's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newUnsupportedLanguageException' :: ( { "Message" :: NullOrUndefined (String) } -> {"Message" :: NullOrUndefined (String) } ) -> UnsupportedLanguageException
-newUnsupportedLanguageException'  customize = (UnsupportedLanguageException <<< customize) { "Message": (NullOrUndefined Nothing) }
+newUnsupportedLanguageException' :: ( { "Message" :: Maybe (String) } -> {"Message" :: Maybe (String) } ) -> UnsupportedLanguageException
+newUnsupportedLanguageException'  customize = (UnsupportedLanguageException <<< customize) { "Message": Nothing }
 
